@@ -4,13 +4,27 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Form</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/1e949ed07a.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="./form.js" defer></script>
     <link href="./form.css" rel="stylesheet" />
   </head>
   <body>
     <header class="header">
-      <nav class="nav"></nav>
+      <nav class="nav">
+        <li><i class="fa-solid fa-arrow-left"></i></li>
+        <li>
+          <span class="brand-name">Take Meowt</span>
+        </li>
+        <li><i class="fa-solid fa-house"></i></li>
+      </nav>
     </header>
     <section>
       <form action="" method="POST">
@@ -19,7 +33,7 @@
           <h2 class="question-title">Tell us about yourself</h2>
 
           <label for="birth-date" class="question-title">Date of Birth:</label>
-          <input type="date" id="birth-date" name="birth-date" />
+          <input type="date" id="birth-date" name="birth-date" required />
 
           <p class="question-title">
             Which word best describes where you live?
@@ -104,10 +118,12 @@
             min="0"
             max="20"
           /><br />
+
+          <a href="#lifestyle">Enter</a>
         </div>
 
         <!-- Lifestyle questions-->
-        <div class="questionBox lifestyle">
+        <div class="questionBox lifestyle" id="lifestyle">
           <h2>Tell us about your lifestyle</h2>
 
           <p class="question-title">How often do you travel?</p>
@@ -233,10 +249,11 @@
           <label for="no"
             ><input type="radio" name="work-home" id="no" value="no" />No</label
           ><br />
+          <a href="#pet-experience">Enter</a>
         </div>
 
         <!-- Pet experience questions-->
-        <div class="questionBox petExperience">
+        <div class="questionBox petExperience" id="pet-experience">
           <h2>Tell us about your experience with pets</h2>
           <p class="question-title">
             Do you have experience looking after dogs?
@@ -304,10 +321,11 @@
               value="no"
             />No</label
           ><br />
+          <a href="#preferences">Enter</a>
         </div>
 
         <!-- Preferences questions-->
-        <div class="questionBox preferences">
+        <div class="questionBox" id="preferences">
           <h2>Tell us about your pet preferences</h2>
           <p class="question-title">Breed (up to two):</p>
           <label for="cocker-spaniel"
@@ -333,17 +351,66 @@
               id="labrador"
               value="labrador"
             />Labrador</label
-          ><br />
-
-          <p>Size (up to two):</p>
-          <label for="tiny"
+          >
+          <label for="doberman"
             ><input
               type="checkbox"
-              name="size"
-              id="tiny"
-              value="tiny"
-            />Tiny</label
+              name="breed"
+              id="doberman"
+              value="doberman"
+            />Doberman</label
           >
+          <label for="chihuahua"
+            ><input
+              type="checkbox"
+              name="breed"
+              id="chihuahua"
+              value="chihuahua"
+            />Chihuahua</label
+          >
+          <label for="great-dane"
+            ><input
+              type="checkbox"
+              name="breed"
+              id="great-dane"
+              value="great-dane"
+            />Great Dane</label
+          >
+          <label for="yorkshire-terrier"
+            ><input
+              type="checkbox"
+              name="breed"
+              id="yorkshire-terrier"
+              value="yorkshire-terrier"
+            />Yorkshire Terrier</label
+          >
+          <label for="pomeranian"
+            ><input
+              type="checkbox"
+              name="breed"
+              id="pomeranian"
+              value="pomeranian"
+            />Pomeranian</label
+          >
+          <label for="maltese-terrier"
+            ><input
+              type="checkbox"
+              name="breed"
+              id="maltese-terrier"
+              value="maltese-terrier"
+            />Maltese Terrier</label
+          >
+          <label for="pug"
+            ><input
+              type="checkbox"
+              name="breed"
+              id="pug"
+              value="pug"
+            />Pug</label
+          >
+
+          <!--Size Preferences-->
+          <p>Size (up to two):</p>
           <label for="small"
             ><input
               type="checkbox"
@@ -367,14 +434,6 @@
               id="large"
               value="large"
             />Large</label
-          >
-          <label for="massive"
-            ><input
-              type="checkbox"
-              name="size"
-              id="massive"
-              value="massive"
-            />Massive</label
           >
 
           <p>Temperament (up to two):</p>
@@ -454,6 +513,11 @@
         </div>
       </form>
     </section>
-    <footer class="footer"></footer>
+    <footer class="footer">
+      <ul>
+        <li><i class="fa-brands fa-twitter"></i></li>
+        <li><i class="fa-brands fa-instagram"></i></li>
+      </ul>
+    </footer>
   </body>
 </html>
