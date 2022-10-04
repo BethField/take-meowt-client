@@ -1,7 +1,10 @@
 *{
     box-sizing: border-box;
     font-family: "Lato", sans-serif;
+    
 }
+
+.mySlides {display: none;}
 
 body {
     background-color: #FEF9EF;
@@ -21,14 +24,53 @@ body {
     align-items: center;
     background-color: #b79e87
 }
-
+/* styling of carousel. */
 #carousel {
     display: flex;
     justify-content: center;
     margin-top: 10px;
-    height: 40vh
+    height: 40vh;
+    flex-direction: column;
 }
-
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+/* homepage information styles */
 #home-info {
     text-align: center;
 }
@@ -45,11 +87,15 @@ body {
     text-justify: inter-word;
     padding: 5%;
     margin-top: 0;
+    margin-bottom: 0;
+}
+ /* button styles */
+#cat-button:hover {
+    text-decoration: underline;
+    position: relative;
+    top: 3px;
 }
 
-#cat-button :hover {
-    background-color: #b79e87;
-}
 #cat-button{
     background-image: url("./images/cats.png");
             background-size: cover;
@@ -64,7 +110,11 @@ body {
             
 }
 
-
+#dog-button:hover {
+    text-decoration: underline;
+    position: relative;
+    top: 3px;
+}
 
 #dog-button {
     background-image: url("./images/beagle.png");
@@ -75,21 +125,42 @@ body {
             border: none;
             border-radius: 25px;
             box-shadow: 5px 5px 5px black;
+            color: white;
             
 }
 
 #buttons {
     display: flex;
     justify-content: space-around;
-    
+    margin-bottom: 7%;
     align-items: center;
 }
+/* Styling for footer */
 
 #footer {
     background-color: #b79e87;
-    height: 50px;
-    padding: 10px;
+    /* height: 50px; */
+    padding: 0.5em;
     margin-top: 10px;
     position: sticky;
     bottom: 0;
+    
 }
+
+#footer ul {
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+/* styling for icons in footer area  */
+.social-icon {
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+    font-size: 2em;
+    text-align: center;
+}
+
+
