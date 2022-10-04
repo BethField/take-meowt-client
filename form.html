@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./form.js" defer></script>
+    <link href="./form.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav"></nav>
+    </header>
+    <section>
+      <form action="" method="POST">
+        <div class="questionBox aboutYou">
+          <h2>Tell us about yourself</h2>
+
+          <label for="birth-date">Date of Birth:</label>
+          <input type="date" id="birth-date" name="birth-date" />
+
+          <p>Which word best describes where you live?</p>
+          <label for="location"
+            ><input
+              type="radio"
+              name="location"
+              id="location"
+              value="city"
+            />City</label
+          >
+          <label for="location"
+            ><input
+              type="radio"
+              name="location"
+              id="location"
+              value="town"
+            />Town</label
+          >
+          <label for="location"
+            ><input
+              type="radio"
+              name="location"
+              id="location"
+              value="countryside"
+            />Countryside</label
+          >
+
+          <p>What accommodation do you live in?</p>
+          <label for="accommodation"
+            ><input
+              type="checkbox"
+              name="accommodation"
+              id="accommodation"
+              value="house"
+            />House with garden</label
+          >
+          <label for="accommodation"
+            ><input
+              type="checkbox"
+              name="accommodation"
+              id="accommodation"
+              value="appartment"
+            />Appartment</label
+          >
+          <label for="location"
+            ><input
+              type="checkbox"
+              name="location"
+              id="location"
+              value="countryside"
+            />Countryside</label
+          >
+        </div>
+        <div class="questionBox lifestyle">
+          <h2>Tell us about your lifestyle</h2>
+        </div>
+        <div class="questionBox petExperience">
+          <h2>Tell us about your experience with pets</h2>
+        </div>
+        <div class="questionBox preferences">
+          <h2>Tell us about your pet preferences</h2>
+        </div>
+      </form>
+    </section>
+    <footer class="footer"></footer>
+  </body>
+</html>
