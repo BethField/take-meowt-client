@@ -14,72 +14,443 @@
     </header>
     <section>
       <form action="" method="POST">
+        <!-- About you questions -->
         <div class="questionBox aboutYou">
-          <h2>Tell us about yourself</h2>
+          <h2 class="question-title">Tell us about yourself</h2>
 
-          <label for="birth-date">Date of Birth:</label>
+          <label for="birth-date" class="question-title">Date of Birth:</label>
           <input type="date" id="birth-date" name="birth-date" />
 
-          <p>Which word best describes where you live?</p>
-          <label for="location"
+          <p class="question-title">
+            Which word best describes where you live?
+          </p>
+          <label for="city"
             ><input
               type="radio"
               name="location"
-              id="location"
+              id="city"
               value="city"
             />City</label
           >
-          <label for="location"
+          <label for="town"
             ><input
               type="radio"
               name="location"
-              id="location"
+              id="town"
               value="town"
             />Town</label
           >
-          <label for="location"
+          <label for="countryside"
             ><input
               type="radio"
               name="location"
-              id="location"
+              id="countryside"
               value="countryside"
             />Countryside</label
           >
 
-          <p>What accommodation do you live in?</p>
-          <label for="accommodation"
+          <p class="question-title">What accommodation do you live in?</p>
+          <label for="house-garden"
             ><input
               type="radio"
               name="accommodation"
-              id="accommodation"
-              value="house"
+              id="house-garden"
+              value="house-garden"
             />House with garden</label
           >
-          <label for="accommodation"
+          <label for="house-no-garden"
             ><input
               type="radio"
               name="accommodation"
-              id="accommodation"
-              value="appartment"
+              id="house-no-garden"
+              value="house-no-garden"
+            />House without garden</label
+          >
+          <label for="apartment"
+            ><input
+              type="radio"
+              name="accommodation"
+              id="apartment"
+              value="apartment"
             />Apartment</label
           >
-          <label for="accommodation"
+          <label for="studio"
             ><input
               type="radio"
               name="accommodation"
-              id="accommodation"
+              id="studio"
               value="studio"
-            />Studio Appartment</label
+            />Studio Apartment</label
+          ><br />
+
+          <label for="housemates" class="question-title"
+            >How many people live in your house?</label
           >
+          <input
+            type="number"
+            id="housemates"
+            name="housemates"
+            min="1"
+            max="20"
+          /><br />
+
+          <label for="children" class="question-title"
+            >How many children do you have?</label
+          >
+          <input
+            type="number"
+            id="children"
+            name="children"
+            min="0"
+            max="20"
+          /><br />
         </div>
+
+        <!-- Lifestyle questions-->
         <div class="questionBox lifestyle">
           <h2>Tell us about your lifestyle</h2>
+
+          <p class="question-title">How often do you travel?</p>
+          <label for="once-year"
+            ><input
+              type="radio"
+              name="travel"
+              id="once-year"
+              value="once-year"
+            />Once a year or less</label
+          >
+          <label for="few-times-year"
+            ><input
+              type="radio"
+              name="travel"
+              id="few-times-year"
+              value="few-times-year"
+            />Two or three times a year</label
+          >
+          <label for="every-few-months"
+            ><input
+              type="radio"
+              name="travel"
+              id="every-few-months"
+              value="every-few-months"
+            />Every few months</label
+          >
+          <label for="every-other-month"
+            ><input
+              type="radio"
+              name="travel"
+              id="every-other-month"
+              value="every-other-month"
+            />Every other month</label
+          >
+          <label for="every-month"
+            ><input
+              type="radio"
+              name="travel"
+              id="every-month"
+              value="every-month"
+            />Every month</label
+          >
+          <label for="multiple-per-month"
+            ><input
+              type="radio"
+              name="travel"
+              id="multiple-per-month"
+              value="multiple-per-month"
+            />Multiple times a month</label
+          ><br />
+
+          <p class="question-title">How often do you exercise?</p>
+          <label for="rarely"
+            ><input
+              type="radio"
+              name="exercise"
+              id="rarely"
+              value="rarely"
+            />Rarely</label
+          >
+          <label for="once-per-month"
+            ><input
+              type="radio"
+              name="exercise"
+              id="once-per-month"
+              value="once-per-month"
+            />Once a month</label
+          >
+          <label for="few-times-month"
+            ><input
+              type="radio"
+              name="exercise"
+              id="few-times-month"
+              value="few-times-month"
+            />
+            A few times a month</label
+          >
+          <label for="once-per-week"
+            ><input
+              type="radio"
+              name="exercise"
+              id="once-per-week"
+              value="once-per-week"
+            />Once a week</label
+          >
+          <label for="many-per-week"
+            ><input
+              type="radio"
+              name="exercise"
+              id="many-per-week"
+              value="many-per-week"
+            />Multiple times a week</label
+          >
+          <label for="every-day"
+            ><input
+              type="radio"
+              name="exercise"
+              id="every-day"
+              value="every-day"
+            />Every day</label
+          ><br />
+
+          <p class="question-title">
+            Are you able to take dogs on long walks (>40 mins)?
+          </p>
+          <label for="yes"
+            ><input type="radio" name="walks" id="yes" value="yes" />Yes</label
+          >
+          <label for="no"
+            ><input type="radio" name="walks" id="no" value="no" />No</label
+          ><br />
+
+          <p class="question-title">Do you work from home?</p>
+          <label for="yes"
+            ><input
+              type="radio"
+              name="work-home"
+              id="yes"
+              value="yes"
+            />Yes</label
+          >
+          <label for="no"
+            ><input type="radio" name="work-home" id="no" value="no" />No</label
+          ><br />
         </div>
+
+        <!-- Pet experience questions-->
         <div class="questionBox petExperience">
           <h2>Tell us about your experience with pets</h2>
+          <p class="question-title">
+            Do you have experience looking after dogs?
+          </p>
+          <label for="yes"
+            ><input
+              type="radio"
+              name="dog-experience"
+              id="yes"
+              value="yes"
+            />Yes</label
+          >
+          <label for="no"
+            ><input
+              type="radio"
+              name="dog-experience"
+              id="no"
+              value="no"
+            />No</label
+          ><br />
+
+          <label for="number-of-pets">How many pets do you currently own</label>
+          <input
+            type="number"
+            id="number-of-pets"
+            name="number-of-pets"
+            min="0"
+            max="30"
+          />
+
+          <p class="question-title">Are you allergic to dogs?</p>
+          <label for="yes"
+            ><input
+              type="radio"
+              name="dog-allergy"
+              id="yes"
+              value="yes"
+            />Yes</label
+          >
+          <label for="no"
+            ><input
+              type="radio"
+              name="dog-allergy"
+              id="no"
+              value="no"
+            />No</label
+          ><br />
+
+          <p class="question-title">
+            Are you happy to administer dog medication?
+          </p>
+          <label for="yes"
+            ><input
+              type="radio"
+              name="dog-medication"
+              id="yes"
+              value="yes"
+            />Yes</label
+          >
+          <label for="no"
+            ><input
+              type="radio"
+              name="dog-medication"
+              id="no"
+              value="no"
+            />No</label
+          ><br />
         </div>
+
+        <!-- Preferences questions-->
         <div class="questionBox preferences">
           <h2>Tell us about your pet preferences</h2>
+          <p class="question-title">Breed (up to two):</p>
+          <label for="cocker-spaniel"
+            ><input
+              type="checkbox"
+              name="breed"
+              id="cocker-spaniel"
+              value="cocker-spaniel"
+            />Cocker Spaniel</label
+          >
+          <label for="jack-russell-terrier"
+            ><input
+              type="checkbox"
+              name="breed"
+              id="jack-russell-terrier"
+              value="jack-russell-terrier"
+            />Jack Russell Terrier</label
+          >
+          <label for="labrador"
+            ><input
+              type="checkbox"
+              name="breed"
+              id="labrador"
+              value="labrador"
+            />Labrador</label
+          ><br />
+
+          <p>Size (up to two):</p>
+          <label for="tiny"
+            ><input
+              type="checkbox"
+              name="size"
+              id="tiny"
+              value="tiny"
+            />Tiny</label
+          >
+          <label for="small"
+            ><input
+              type="checkbox"
+              name="size"
+              id="small"
+              value="small"
+            />Small</label
+          >
+          <label for="medium"
+            ><input
+              type="checkbox"
+              name="size"
+              id="medium"
+              value="medium"
+            />Medium</label
+          >
+          <label for="large"
+            ><input
+              type="checkbox"
+              name="size"
+              id="large"
+              value="large"
+            />Large</label
+          >
+          <label for="massive"
+            ><input
+              type="checkbox"
+              name="size"
+              id="massive"
+              value="massive"
+            />Massive</label
+          >
+
+          <p>Temperament (up to two):</p>
+          <label for="energetic"
+            ><input
+              type="checkbox"
+              name="temperament"
+              id="energetic"
+              value="energetic"
+            />Energetic</label
+          >
+          <label for="docile"
+            ><input
+              type="checkbox"
+              name="temperament"
+              id="docile"
+              value="docile"
+            />Docile</label
+          >
+          <label for="friendly"
+            ><input
+              type="checkbox"
+              name="temperament"
+              id="friendly"
+              value="friendly"
+            />Friendly</label
+          >
+          <label for="intelligent"
+            ><input
+              type="checkbox"
+              name="temperament"
+              id="intelligent"
+              value="intelligent"
+            />Intelligent</label
+          >
+          <label for="playful"
+            ><input
+              type="checkbox"
+              name="temperament"
+              id="playful"
+              value="playful"
+            />Playful</label
+          >
+          <label for="protective"
+            ><input
+              type="checkbox"
+              name="temperament"
+              id="protective"
+              value="protective"
+            />Protective</label
+          >
+          <label for="confident"
+            ><input
+              type="checkbox"
+              name="temperament"
+              id="confident"
+              value="confident"
+            />Confident</label
+          >
+          <label for="aggressive"
+            ><input
+              type="checkbox"
+              name="temperament"
+              id="aggressive"
+              value="aggressive"
+            />Aggressive</label
+          >
+          <label for="obedient"
+            ><input
+              type="checkbox"
+              name="temperament"
+              id="obedient"
+              value="obedient"
+            />Obedient</label
+          >
+          <input type="submit" value="submit" />
         </div>
       </form>
     </section>
