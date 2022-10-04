@@ -24,13 +24,28 @@ body {
     align-items: center;
     background-color: #b79e87
 }
+/* styling of carousel container to ensure all images are central */
+
+.slideshow-container {
+    display: flex;
+    justify-content: center;
+}
 /* styling of carousel. */
 #carousel {
     display: flex;
     justify-content: center;
     margin-top: 10px;
-    height: 40vh;
+    height: 36vh;
     flex-direction: column;
+}
+
+/* styling carousel images to ensure they are all same height/width */
+.carousel-img {vertical-align: middle;}
+
+.carousel-img {
+    width: auto;
+    height: 240px;
+    
 }
 /* Caption text */
 .text {
@@ -94,26 +109,47 @@ body {
     text-decoration: underline;
     position: relative;
     top: 3px;
+    opacity: 0.8;
 }
 
 #cat-button{
-    background-image: url("./images/cats.png");
-            background-size: cover;
+            /* background-image: url("./images/cats.png");
+            background-size: cover; */
             width: 45%;
             height: 147px;
             font-size: 2rem;
-            filter: saturate(80%);
-            color: white;
+            /* filter: saturate(80%); */
             border: none;
             border-radius: 25px;
             box-shadow: 5px 5px 5px black;
-            
+            position:relative;
+                    
 }
+#cat-button::before {
+    content: "";
+    background: url("./images/cats.png");
+    opacity: 0.6;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 25px;
+    position: absolute;
+    z-index: 1;  
+    background-size: cover; 
+  }
 
+
+
+#cat-button p {
+    color: black;
+    
+}
 #dog-button:hover {
     text-decoration: underline;
     position: relative;
     top: 3px;
+    opacity: 0.8;
 }
 
 #dog-button {
@@ -126,7 +162,12 @@ body {
             border-radius: 25px;
             box-shadow: 5px 5px 5px black;
             color: white;
+            opacity: 0.6;
             
+}
+#dog-button p {
+    opacity: 1;
+    color: black;
 }
 
 #buttons {
