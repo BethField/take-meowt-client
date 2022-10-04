@@ -9,13 +9,33 @@ body {
 }
 
 .nav {
-  position: sticky;
+  position: fixed;
+  z-index: 1;
   top: 0;
   width: 100%;
   padding: 20px 15px;
   background-color: grey;
   font-size: 2em;
   text-align: center;
+  background-color: #202124;
+  color: rgba(255, 255, 255, 0.921);
+}
+
+.response-container {
+  margin-top: 100px;
+}
+
+li:hover {
+  color: #0377b6;
+  cursor: pointer;
+  position: relative;
+  top: 3px;
+}
+
+.animal-card:hover {
+  position: relative;
+  top: 3px;
+  cursor: pointer;
 }
 
 .nav,
@@ -31,6 +51,7 @@ ul {
 }
 
 li {
+  transition: 400ms;
   list-style-type: none;
 }
 
@@ -40,11 +61,14 @@ li {
   width: 90%;
   margin: 1em auto;
   box-shadow: 1px 1px 5px grey;
+  background: white;
+  transition: 1s;
 }
 
 img {
   width: 100%;
-  border-radius: 15px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 p {
@@ -80,11 +104,13 @@ p {
 }
 
 footer {
-  position: sticky;
+  position: fixed;
   bottom: 0;
   background-color: grey;
   width: 100%;
   padding: 0.5em;
   font-size: 2em;
   text-align: center;
+  background-color: #202124;
+  color: rgba(255, 255, 255, 0.921);
 }
