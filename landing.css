@@ -1,12 +1,21 @@
+*{
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+}
+
 body {
     background-color: #FEF9EF;
+    margin: 0 auto;
+    height: 100vh;
+
+    
 }
 
 /* apply styles to header */
 
 #header {
     width: 100%;
-    height: 80px;
+    height: 78.5px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,14 +26,25 @@ body {
     display: flex;
     justify-content: center;
     margin-top: 10px;
+    height: 40vh
 }
 
 #home-info {
     text-align: center;
 }
 
+#home-info h3 {
+    font-size: 1.4em;
+    margin-bottom: 0;
+}
+
+
 #home-info p {
-    font-size: 13px;
+    font-size: 1.2em;
+    text-align: justify;
+    text-justify: inter-word;
+    padding: 5%;
+    margin-top: 0;
 }
 
 #cat-button :hover {
@@ -33,9 +53,14 @@ body {
 #cat-button{
     background-image: url("./images/cats.png");
             background-size: cover;
-            width: 259px;
+            width: 45%;
             height: 147px;
             font-size: 2rem;
+            filter: saturate(80%);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            box-shadow: 5px 5px 5px black;
             
 }
 
@@ -44,16 +69,18 @@ body {
 #dog-button {
     background-image: url("./images/beagle.png");
             background-size: cover;
-            width: 259px;
+            width: 45%;
             height: 147px;
             font-size: 2rem;
-            margin-bottom: 10px;
+            border: none;
+            border-radius: 25px;
+            box-shadow: 5px 5px 5px black;
             
 }
 
 #buttons {
     display: flex;
-    flex-direction: column;
+    justify-content: space-around;
     
     align-items: center;
 }
@@ -63,6 +90,6 @@ body {
     height: 50px;
     padding: 10px;
     margin-top: 10px;
-   
-    
+    position: sticky;
+    bottom: 0;
 }
