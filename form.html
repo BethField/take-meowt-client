@@ -29,8 +29,8 @@
     <section>
       <form action="" method="POST">
         <!-- About you questions -->
-        <div class="questionBox aboutYou">
-          <h2 class="question-title">Tell us about yourself</h2>
+        <div class="questionBox" id="about-you">
+          <h2 class="box-title">Tell us about yourself</h2>
 
           <label for="birth-date" class="question-title">Date of Birth:</label>
           <input type="date" id="birth-date" name="birth-date" required />
@@ -44,6 +44,7 @@
               name="location"
               id="city"
               value="city"
+              required
             />City</label
           >
           <label for="town"
@@ -70,6 +71,7 @@
               name="accommodation"
               id="house-garden"
               value="house-garden"
+              required
             />House with garden</label
           >
           <label for="house-no-garden"
@@ -106,6 +108,7 @@
             name="housemates"
             min="1"
             max="20"
+            required
           /><br />
 
           <label for="children" class="question-title"
@@ -117,6 +120,7 @@
             name="children"
             min="0"
             max="20"
+            required
           /><br />
 
           <a href="#lifestyle">Enter</a>
@@ -124,7 +128,7 @@
 
         <!-- Lifestyle questions-->
         <div class="questionBox lifestyle" id="lifestyle">
-          <h2>Tell us about your lifestyle</h2>
+          <h2 class="box-title">Tell us about your lifestyle</h2>
 
           <p class="question-title">How often do you travel?</p>
           <label for="once-year"
@@ -133,6 +137,7 @@
               name="travel"
               id="once-year"
               value="once-year"
+              required
             />Once a year or less</label
           >
           <label for="few-times-year"
@@ -183,6 +188,7 @@
               name="exercise"
               id="rarely"
               value="rarely"
+              required
             />Rarely</label
           >
           <label for="once-per-month"
@@ -231,7 +237,13 @@
             Are you able to take dogs on long walks (>40 mins)?
           </p>
           <label for="yes"
-            ><input type="radio" name="walks" id="yes" value="yes" />Yes</label
+            ><input
+              type="radio"
+              name="walks"
+              id="yes"
+              value="yes"
+              required
+            />Yes</label
           >
           <label for="no"
             ><input type="radio" name="walks" id="no" value="no" />No</label
@@ -244,6 +256,7 @@
               name="work-home"
               id="yes"
               value="yes"
+              required
             />Yes</label
           >
           <label for="no"
@@ -254,7 +267,7 @@
 
         <!-- Pet experience questions-->
         <div class="questionBox petExperience" id="pet-experience">
-          <h2>Tell us about your experience with pets</h2>
+          <h2 class="box-title">Tell us about your experience with pets</h2>
           <p class="question-title">
             Do you have experience looking after dogs?
           </p>
@@ -264,6 +277,7 @@
               name="dog-experience"
               id="yes"
               value="yes"
+              required
             />Yes</label
           >
           <label for="no"
@@ -326,7 +340,7 @@
 
         <!-- Preferences questions-->
         <div class="questionBox" id="preferences">
-          <h2>Tell us about your pet preferences</h2>
+          <h2 class="box-title">Tell us about your pet preferences</h2>
           <p class="question-title">Breed (up to two):</p>
           <label for="cocker-spaniel"
             ><input
