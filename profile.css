@@ -37,6 +37,14 @@ footer > ul {
   justify-content: space-around;
 }
 
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  height: 40vh;
+  /* margin-top: 300px; */
+  padding-top: 30%;
+}
+
 ul {
   margin: 0;
   padding: 0;
