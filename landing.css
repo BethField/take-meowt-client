@@ -23,10 +23,20 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: row;
     background-color: #202124;
     color: white;
     font-size: 2em;
 }
+#logo{
+    display: flex;
+    justify-content: center;
+}
+/* nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+} */
 /* styling of carousel container to ensure all images are central */
 
 .slideshow-container {
