@@ -28,7 +28,7 @@
     </header>
     <section>
       <form action="./response.html" method="get">
-        <div class="questionBox" id="about-you">
+        <!-- <div class="questionBox" id="about-you">
           <h2 class="box-title">Tell us about yourself</h2>
           <div class="questions">
             <label for="birthDate" class="question-title">Date of Birth:</label>
@@ -141,7 +141,7 @@
                 value="once-year"
                 required
               />Once a year or less</label
-            >
+            ><br />
             <label for="few-times-year"
               ><input
                 type="radio"
@@ -149,7 +149,7 @@
                 id="few-times-year"
                 value="few-times-year"
               />Two or three times a year</label
-            >
+            ><br />
             <label for="every-few-months"
               ><input
                 type="radio"
@@ -157,7 +157,7 @@
                 id="every-few-months"
                 value="every-few-months"
               />Every few months</label
-            >
+            ><br />
             <label for="every-other-month"
               ><input
                 type="radio"
@@ -165,7 +165,7 @@
                 id="every-other-month"
                 value="every-other-month"
               />Every other month</label
-            >
+            ><br />
             <label for="every-month"
               ><input
                 type="radio"
@@ -173,7 +173,7 @@
                 id="every-month"
                 value="every-month"
               />Every month</label
-            >
+            ><br />
             <label for="multiple-per-month"
               ><input
                 type="radio"
@@ -192,7 +192,7 @@
                 value="rarely"
                 required
               />Rarely</label
-            >
+            ><br />
             <label for="once-per-month"
               ><input
                 type="radio"
@@ -200,16 +200,15 @@
                 id="once-per-month"
                 value="once-per-month"
               />Once a month</label
-            >
+            ><br />
             <label for="few-times-month"
               ><input
                 type="radio"
                 name="exercise"
                 id="few-times-month"
                 value="few-times-month"
-              />
-              A few times a month</label
-            >
+              />A few times a month</label
+            ><br />
             <label for="once-per-week"
               ><input
                 type="radio"
@@ -217,7 +216,7 @@
                 id="once-per-week"
                 value="once-per-week"
               />Once a week</label
-            >
+            ><br />
             <label for="many-per-week"
               ><input
                 type="radio"
@@ -225,7 +224,7 @@
                 id="many-per-week"
                 value="many-per-week"
               />Multiple times a week</label
-            >
+            ><br />
             <label for="every-day"
               ><input
                 type="radio"
@@ -299,7 +298,7 @@
               />No</label
             ><br />
 
-            <label for="number-of-pets"
+            <label for="number-of-pets" class="question-title"
               >How many pets do you currently own</label
             >
             <input
@@ -349,92 +348,98 @@
           <div class="button-container">
             <a href="#preferences" class="enter-button">Enter</a>
           </div>
-        </div>
+        </div> -->
 
         <div class="questionBox" id="preferences">
           <h2 class="box-title">Tell us about your pet preferences</h2>
           <div class="questions">
             <p class="question-title">Breed (up to two):</p>
-            <label for="cocker-spaniel"
-              ><input
-                type="checkbox"
-                name="breed"
-                id="cocker-spaniel"
-                value="cocker-spaniel"
-              />Cocker Spaniel</label
-            >
-            <label for="jack-russell-terrier"
-              ><input
-                type="checkbox"
-                name="breed"
-                id="jack-russell-terrier"
-                value="jack-russell-terrier"
-              />Jack Russell Terrier</label
-            >
-            <label for="labrador"
-              ><input
-                type="checkbox"
-                name="breed"
-                id="labrador"
-                value="labrador"
-              />Labrador</label
-            >
-            <label for="doberman"
-              ><input
-                type="checkbox"
-                name="breed"
-                id="doberman"
-                value="doberman"
-              />Doberman</label
-            >
-            <label for="chihuahua"
-              ><input
-                type="checkbox"
-                name="breed"
-                id="chihuahua"
-                value="chihuahua"
-              />Chihuahua</label
-            >
-            <label for="great-dane"
-              ><input
-                type="checkbox"
-                name="breed"
-                id="great-dane"
-                value="great-dane"
-              />Great Dane</label
-            >
-            <label for="yorkshire-terrier"
-              ><input
-                type="checkbox"
-                name="breed"
-                id="yorkshire-terrier"
-                value="yorkshire-terrier"
-              />Yorkshire Terrier</label
-            >
-            <label for="pomeranian"
-              ><input
-                type="checkbox"
-                name="breed"
-                id="pomeranian"
-                value="pomeranian"
-              />Pomeranian</label
-            >
-            <label for="maltese-terrier"
-              ><input
-                type="checkbox"
-                name="breed"
-                id="maltese-terrier"
-                value="maltese-terrier"
-              />Maltese Terrier</label
-            >
-            <label for="pug"
-              ><input
-                type="checkbox"
-                name="breed"
-                id="pug"
-                value="pug"
-              />Pug</label
-            >
+            <div class="all-breeds">
+              <div class="breed-options1">
+                <label for="cocker-spaniel" class="check-label"
+                  ><input
+                    type="checkbox"
+                    name="breed"
+                    id="cocker-spaniel"
+                    value="cocker-spaniel"
+                  />Cocker Spaniel</label
+                >
+                <label for="jack-russell-terrier" class="check-label"
+                  ><input
+                    type="checkbox"
+                    name="breed"
+                    id="jack-russell-terrier"
+                    value="jack-russell-terrier"
+                  />Jack Russell Terrier</label
+                >
+                <label for="labrador" class="check-label"
+                  ><input
+                    type="checkbox"
+                    name="breed"
+                    id="labrador"
+                    value="labrador"
+                  />Labrador</label
+                >
+                <label for="doberman" class="check-label"
+                  ><input
+                    type="checkbox"
+                    name="breed"
+                    id="doberman"
+                    value="doberman"
+                  />Doberman</label
+                >
+                <label for="chihuahua" class="check-label"
+                  ><input
+                    type="checkbox"
+                    name="breed"
+                    id="chihuahua"
+                    value="chihuahua"
+                  />Chihuahua</label
+                >
+              </div>
+              <div class="breed-options2">
+                <label for="great-dane" class="check-label"
+                  ><input
+                    type="checkbox"
+                    name="breed"
+                    id="great-dane"
+                    value="great-dane"
+                  />Great Dane</label
+                >
+                <label for="yorkshire-terrier" class="check-label"
+                  ><input
+                    type="checkbox"
+                    name="breed"
+                    id="yorkshire-terrier"
+                    value="yorkshire-terrier"
+                  />Yorkshire Terrier</label
+                >
+                <label for="pomeranian" class="check-label"
+                  ><input
+                    type="checkbox"
+                    name="breed"
+                    id="pomeranian"
+                    value="pomeranian"
+                  />Pomeranian</label
+                >
+                <label for="maltese-terrier" class="check-label"
+                  ><input
+                    type="checkbox"
+                    name="breed"
+                    id="maltese-terrier"
+                    value="maltese-terrier"
+                  />Maltese Terrier</label
+                >
+                <label for="pug" class="check-label"
+                  ><input
+                    type="checkbox"
+                    name="breed"
+                    id="pug"
+                    value="pug"
+                  />Pug</label
+                >
+              </div>
+            </div>
 
             <p>Size (up to two):</p>
             <label for="small"

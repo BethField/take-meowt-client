@@ -76,6 +76,14 @@ form {
   height: 500px;
 }
 
+#lifestyle {
+  height: 650px;
+}
+
+#preferences {
+  height: 700px;
+}
+
 .box-title {
   text-align: center;
 }
@@ -93,8 +101,24 @@ form {
   text-align: center;
 }
 
-#lifestyle {
-  height: 500px;
+.all-breeds {
+  display: flex;
+}
+
+.breed-options1 {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.breed-options2 {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.check-label {
+  width: 60%;
 }
 
 footer {
