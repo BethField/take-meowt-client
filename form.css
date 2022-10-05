@@ -1,22 +1,61 @@
 * {
   box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  margin-bottom: 70px;
 }
 
 body {
   margin: 0 auto;
-  background-color: #f7e6f0;
+  background-color: #c9b1bd;
+}
+
+header {
+  height: 78px;
 }
 
 .nav {
+  position: fixed;
+  top: 0px;
   width: 100%;
-  height: 69px;
-  border: 2px solid grey;
+  padding: 20px 15px;
+  background-color: grey;
+  font-size: 2em;
+  text-align: center;
+  background-color: #202124;
+  color: rgba(255, 255, 255, 0.921);
+  z-index: 1;
+}
+
+li {
+  transition: 400ms;
+  list-style-type: none;
+}
+li:hover {
+  color: #0377b6;
+  cursor: pointer;
+  position: relative;
+  top: 3px;
+}
+
+.nav,
+footer > ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
 }
 
 form {
   width: 100%;
-  height: 500px;
-  border: 2px solid grey;
+  height: 2100px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -28,17 +67,68 @@ form {
   height: 400px;
   margin: 20px 0;
   border-radius: 30px;
-  background-color: #fffdfd;
+  background-color: #fef9ef;
   opacity: 0.8;
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.12), 0 1px 10px rgba(0, 0, 0, 0.24);
 }
 
-.lifestyle {
+#about-you {
   height: 500px;
 }
 
-.footer {
+#lifestyle {
+  height: 650px;
+}
+
+#preferences {
+  height: 700px;
+}
+
+.box-title {
+  text-align: center;
+}
+
+.question-title {
+  font-weight: bold;
+}
+
+.questions {
+  padding: 0 15px;
+}
+
+.button-container {
   width: 100%;
-  height: 69px;
-  border: 2px solid grey;
+  text-align: center;
+}
+
+.all-breeds {
+  display: flex;
+}
+
+.breed-options1 {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.breed-options2 {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.check-label {
+  width: 100%;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  background-color: grey;
+  width: 100%;
+  padding: 0.5em;
+  font-size: 2em;
+  text-align: center;
+  background-color: #202124;
+  color: rgba(255, 255, 255, 0.921);
 }
