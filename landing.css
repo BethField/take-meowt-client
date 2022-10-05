@@ -11,8 +11,6 @@ body {
     background-color: #FEF9EF;
     margin: 0 auto;
     height: 100vh;
-
-    
 }
 
 /* apply styles to header */
@@ -42,6 +40,7 @@ body {
 .slideshow-container {
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 /* styling of carousel. */
 #carousel {
@@ -50,14 +49,15 @@ body {
     margin-top: 10px;
     height: 39vh;
     flex-direction: column;
+    width:100%;
 }
 
 /* styling carousel images to ensure they are all same height/width */
 .carousel-img {vertical-align: middle;}
 
 .carousel-img {
-    width: auto;
-    height: 240px;
+    /* max-width: 70%; */
+    /* height: 240px; */
     
 }
 /* Caption text */
@@ -125,6 +125,11 @@ body {
     position: relative;
     top: 3px;
     opacity: 0.8;
+}
+
+a:visited {
+    text-decoration: none;
+    /* color: white; */
 }
 
 #cat-button{
