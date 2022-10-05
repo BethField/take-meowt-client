@@ -22,7 +22,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #b79e87
+    background-color: #202124;
+    color: white;
+    font-size: 2em;
 }
 /* styling of carousel container to ensure all images are central */
 
@@ -35,7 +37,7 @@ body {
     display: flex;
     justify-content: center;
     margin-top: 10px;
-    height: 36vh;
+    height: 39vh;
     flex-direction: column;
 }
 
@@ -93,6 +95,7 @@ body {
 #home-info h3 {
     font-size: 1.4em;
     margin-bottom: 0;
+    margin-top: 0;
 }
 
 
@@ -179,7 +182,7 @@ body {
 /* Styling for footer */
 
 #footer {
-    background-color: #b79e87;
+    background-color: #202124;
     /* height: 50px; */
     padding: 0.5em;
     margin-top: 10px;
@@ -202,6 +205,14 @@ body {
     width: 50%;
     font-size: 2em;
     text-align: center;
+    color: white;
+    
 }
+.social-icon:hover {
+    color: #0377B6;
+    cursor: pointer;
+    position: relative;
+    top: 3px;
+  }
 
 
