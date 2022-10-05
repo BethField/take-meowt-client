@@ -56,7 +56,7 @@ body {
 .carousel-img {vertical-align: middle;}
 
 .carousel-img {
-    max-width: 70%;
+    /* max-width: 70%; */
     height: 240px;
     
 }
