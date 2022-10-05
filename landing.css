@@ -4,6 +4,7 @@
     
 }
 
+
 .mySlides {display: none;}
 
 body {
@@ -110,21 +111,23 @@ body {
 }
  /* button styles */
 #cat-button:hover {
-    text-decoration: underline;
+    /* text-decoration: underline; */
     position: relative;
     top: 3px;
     opacity: 0.8;
 }
 
 #cat-button{
-            width: 45%;
-            height: 147px;
-            font-size: 2rem;
-            /* filter: saturate(80%); */
-            border: none;
-            border-radius: 25px;
-            box-shadow: 5px 5px 5px black;
-            position:relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 45%;
+        height: 147px;
+        font-size: 2rem;
+        border: none;
+        border-radius: 25px;
+        box-shadow: 5px 5px 5px black;
+        position:relative;
                     
 }
 
@@ -151,7 +154,7 @@ body {
     
 }
 #dog-button:hover {
-    text-decoration: underline;
+    /* text-decoration: underline; */
     position: relative;
     top: 3px;
     opacity: 0.8;
@@ -198,6 +201,7 @@ body {
     margin-bottom: 7%;
     align-items: center;
 }
+
 /* Styling for footer */
 
 #footer {
