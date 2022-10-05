@@ -23,6 +23,7 @@ body {
 
 .response-container {
   margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 li:hover {
@@ -82,11 +83,12 @@ p {
   justify-content: center;
   align-items: center;
   margin: 3px 0;
+  text-transform: capitalize;
 }
 
 .animal-name {
   margin: 0.2em 0;
-  font-size: 2.5em;
+  font-size: 2em;
 }
 
 .animal-breakdown {
