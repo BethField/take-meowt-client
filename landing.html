@@ -14,29 +14,59 @@
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+    <script defer src="./landing.js"></script>
 </head>
 <body>
     <section id="header">
+        <img id="logo" src="./images/logo.png"/>
+        <!-- <nav>
         
-        <nav>
-          <header>Take meowt</header>
+          <header>Take meowt</header> -->
             
-        </nav>
+        <!-- </nav> -->
     </section>
     <section id="carousel">
-        <img class="landing-image" src="./images/dog.png"/>
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <img class="carousel-img"src="./images/cats.png"/>
+              <div class="text">Caption Text</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <img class="carousel-img" src="./images/dog.png"/>
+              <div class="text">Caption Two</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <img class="carousel-img"src="./images/beagle.png"/>
+              <div class="text">Caption Three</div>
+            </div>
+            
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot"></span> 
+              <span class="dot"></span> 
+              <span class="dot"></span> 
+            </div>
+        <!-- <img class="landing-image" src="./images/dog.png"/> -->
     </section>
     <section id="home-info">
         <h3> Welcome to Take MEOWt </h3>
-        <p>We are an animal welfare charity working to improve life for dogs, cats and the people in our community. If you would like to get started on rehoming your first pet, click one the buttons below.</p>
+        <p>We are an animal shelter organisation working to improve life for dogs, cats and the people in our community. To get started on rehoming your first pet, choose a pet and fill out our form to find your perfect companion  .</p>
     </section>
     <section id="buttons">
-        <button id="dog-button"> DOGS </button>
-        <button id="cat-button"> CATS </button>
+        <a id="dog-button" href="./form.html"><p>DOGS</p></a>
+        <a id="cat-button" href="./form.html"><p>CATS</p></a>
     </section>
     <section id="footer">
         <footer>
-            <p> Contact </p>
+            <ul>
+                <li class="social-icon"><i class="fa-brands fa-twitter"></i></li>
+                <li class="social-icon"><i class="fa-brands fa-instagram"></i></li>
+            </ul>
         </footer>
     </section>
     
