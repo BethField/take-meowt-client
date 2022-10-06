@@ -26,7 +26,6 @@ async function sendUserData(e) {
     temperament: filterCheckboxes(e.target.temperament),
   };
 
-  
   if (
     breedCount.value > 0 &&
     breedCount.value < 3 &&
@@ -37,8 +36,7 @@ async function sendUserData(e) {
   ) {
     sessionStorage.setItem("formData", JSON.stringify(data));
     window.location.href = `./response.html`;
-
-} else {
+  } else {
     alert("Please");
   }
 }
