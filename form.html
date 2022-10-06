@@ -13,6 +13,7 @@
       src="https://kit.fontawesome.com/1e949ed07a.js"
       crossorigin="anonymous"
     ></script>
+    <script src="./helpers.js" defer></script>
     <script src="./form.js" defer></script>
     <link href="./form.css" rel="stylesheet" />
   </head>
@@ -27,7 +28,7 @@
       </nav>
     </header>
     <section>
-      <form action="./response.html" method="get">
+      <form>
         <div class="questionBox" id="about-you">
           <h2 class="box-title">Tell us about yourself</h2>
           <div class="questions">
@@ -64,65 +65,64 @@
             >
 
             <p class="question-title">What accommodation do you live in?</p>
-            <div class="questions">
-              <label for="house-garden"
-                ><input
-                  type="radio"
-                  name="accommodation"
-                  id="house-garden"
-                  value="house-garden"
-                  required
-                />House with garden</label
-              ><br />
-              <label for="house-no-garden"
-                ><input
-                  type="radio"
-                  name="accommodation"
-                  id="house-no-garden"
-                  value="house-no-garden"
-                />House without garden</label
-              ><br />
-              <label for="apartment"
-                ><input
-                  type="radio"
-                  name="accommodation"
-                  id="apartment"
-                  value="apartment"
-                />Apartment</label
-              ><br />
-              <label for="studio"
-                ><input
-                  type="radio"
-                  name="accommodation"
-                  id="studio"
-                  value="studio"
-                />Studio Apartment</label
-              ><br /><br />
 
-              <label for="housemates" class="question-title"
-                >How many people live in your house?</label
-              >
-              <input
-                type="number"
-                id="housemates"
-                name="housemates"
-                min="1"
-                max="20"
+            <label for="house-garden"
+              ><input
+                type="radio"
+                name="accommodation"
+                id="house-garden"
+                value="house-garden"
                 required
-              /><br /><br />
+              />House with garden</label
+            ><br />
+            <label for="house-no-garden"
+              ><input
+                type="radio"
+                name="accommodation"
+                id="house-no-garden"
+                value="house-no-garden"
+              />House without garden</label
+            ><br />
+            <label for="apartment"
+              ><input
+                type="radio"
+                name="accommodation"
+                id="apartment"
+                value="apartment"
+              />Apartment</label
+            ><br />
+            <label for="studio"
+              ><input
+                type="radio"
+                name="accommodation"
+                id="studio"
+                value="studio"
+              />Studio Apartment</label
+            ><br /><br />
 
-              <label for="children" class="question-title"
-                >How many children do you have?</label
-              >
-              <input
-                type="number"
-                id="children"
-                name="children"
-                min="0"
-                max="20"
-                required
-              /><br /><br />
-            </div>
+            <label for="housemates" class="question-title"
+              >How many people live in your house?</label
+            >
+            <input
+              type="number"
+              id="housemates"
+              name="housemates"
+              min="1"
+              max="20"
+              required
+            /><br /><br />
+
+            <label for="children" class="question-title"
+              >How many children do you have?</label
+            >
+            <input
+              type="number"
+              id="children"
+              name="children"
+              min="0"
+              max="20"
+              required
+            /><br /><br />
           </div>
           <div class="button-container">
             <a href="#lifestyle" class="next-button">Next</a>
@@ -274,7 +274,7 @@
           </div>
         </div>
 
-        <div class="questionBox petExperience" id="pet-experience">
+        <div class="questionBox" id="pet-experience">
           <h2 class="box-title">Tell us about your experience with pets</h2>
           <div class="questions">
             <p class="question-title">
@@ -362,6 +362,7 @@
                     name="breed"
                     id="cocker-spaniel"
                     value="cocker-spaniel"
+                    class="breedCheck"
                   />Cocker Spaniel</label
                 >
                 <label for="jack-russell-terrier" class="check-label"
@@ -370,6 +371,7 @@
                     name="breed"
                     id="jack-russell-terrier"
                     value="jack-russell-terrier"
+                    class="breedCheck"
                   />Jack Russell</label
                 >
                 <label for="labrador" class="check-label"
@@ -378,6 +380,7 @@
                     name="breed"
                     id="labrador"
                     value="labrador"
+                    class="breedCheck"
                   />Labrador</label
                 >
                 <label for="doberman" class="check-label"
@@ -386,6 +389,7 @@
                     name="breed"
                     id="doberman"
                     value="doberman"
+                    class="breedCheck"
                   />Doberman</label
                 >
                 <label for="chihuahua" class="check-label"
@@ -394,6 +398,7 @@
                     name="breed"
                     id="chihuahua"
                     value="chihuahua"
+                    class="breedCheck"
                   />Chihuahua</label
                 >
               </div>
@@ -404,6 +409,7 @@
                     name="breed"
                     id="great-dane"
                     value="great-dane"
+                    class="breedCheck"
                   />Great Dane</label
                 >
                 <label for="yorkshire-terrier" class="check-label"
@@ -412,6 +418,7 @@
                     name="breed"
                     id="yorkshire-terrier"
                     value="yorkshire-terrier"
+                    class="breedCheck"
                   />Yorkshire Terrier</label
                 >
                 <label for="pomeranian" class="check-label"
@@ -420,6 +427,7 @@
                     name="breed"
                     id="pomeranian"
                     value="pomeranian"
+                    class="breedCheck"
                   />Pomeranian</label
                 >
                 <label for="maltese-terrier" class="check-label"
@@ -428,6 +436,7 @@
                     name="breed"
                     id="maltese-terrier"
                     value="maltese-terrier"
+                    class="breedCheck"
                   />Maltese Terrier</label
                 >
                 <label for="pug" class="check-label"
@@ -436,18 +445,20 @@
                     name="breed"
                     id="pug"
                     value="pug"
+                    class="breedCheck"
                   />Pug</label
                 >
               </div>
             </div>
 
-            <p>Size (up to two):</p>
+            <p class="question-title">Size (up to two):</p>
             <label for="small"
               ><input
                 type="checkbox"
                 name="size"
                 id="small"
                 value="small"
+                class="sizeCheck"
               />Small</label
             >
             <label for="medium"
@@ -456,6 +467,7 @@
                 name="size"
                 id="medium"
                 value="medium"
+                class="sizeCheck"
               />Medium</label
             >
             <label for="large"
@@ -464,86 +476,102 @@
                 name="size"
                 id="large"
                 value="large"
+                class="sizeCheck"
               />Large</label
             >
 
-            <p>Temperament (up to two):</p>
-            <label for="energetic"
-              ><input
-                type="checkbox"
-                name="temperament"
-                id="energetic"
-                value="energetic"
-              />Energetic</label
-            >
-            <label for="docile"
-              ><input
-                type="checkbox"
-                name="temperament"
-                id="docile"
-                value="docile"
-              />Docile</label
-            >
-            <label for="friendly"
-              ><input
-                type="checkbox"
-                name="temperament"
-                id="friendly"
-                value="friendly"
-              />Friendly</label
-            >
-            <label for="intelligent"
-              ><input
-                type="checkbox"
-                name="temperament"
-                id="intelligent"
-                value="intelligent"
-              />Intelligent</label
-            >
-            <label for="playful"
-              ><input
-                type="checkbox"
-                name="temperament"
-                id="playful"
-                value="playful"
-              />Playful</label
-            >
-            <label for="protective"
-              ><input
-                type="checkbox"
-                name="temperament"
-                id="protective"
-                value="protective"
-              />Protective</label
-            >
-            <label for="confident"
-              ><input
-                type="checkbox"
-                name="temperament"
-                id="confident"
-                value="confident"
-              />Confident</label
-            >
-            <label for="aggressive"
-              ><input
-                type="checkbox"
-                name="temperament"
-                id="aggressive"
-                value="aggressive"
-              />Aggressive</label
-            >
-            <label for="obedient"
-              ><input
-                type="checkbox"
-                name="temperament"
-                id="obedient"
-                value="obedient"
-              />Obedient</label
-            >
+            <p class="question-title">Temperament (up to two):</p>
+            <div class="all-temps">
+              <div class="temp-options1">
+                <label for="energetic" class="check-label"
+                  ><input
+                    type="checkbox"
+                    name="temperament"
+                    id="energetic"
+                    value="energetic"
+                    class="tempCheck"
+                  />Energetic</label
+                >
+                <label for="docile" class="check-label"
+                  ><input
+                    type="checkbox"
+                    name="temperament"
+                    id="docile"
+                    value="docile"
+                    class="tempCheck"
+                  />Docile</label
+                >
+                <label for="friendly" class="check-label"
+                  ><input
+                    type="checkbox"
+                    name="temperament"
+                    id="friendly"
+                    value="friendly"
+                    class="tempCheck"
+                  />Friendly</label
+                >
+                <label for="intelligent" class="check-label"
+                  ><input
+                    type="checkbox"
+                    name="temperament"
+                    id="intelligent"
+                    value="intelligent"
+                    class="tempCheck"
+                  />Intelligent</label
+                >
+              </div>
+              <div class="temp-options2">
+                <label for="playful" class="check-label"
+                  ><input
+                    type="checkbox"
+                    name="temperament"
+                    id="playful"
+                    value="playful"
+                    class="tempCheck"
+                  />Playful</label
+                >
+                <label for="protective" class="check-label"
+                  ><input
+                    type="checkbox"
+                    name="temperament"
+                    id="protective"
+                    value="protective"
+                    class="tempCheck"
+                  />Protective</label
+                >
+                <label for="confident" class="check-label"
+                  ><input
+                    type="checkbox"
+                    name="temperament"
+                    id="confident"
+                    value="confident"
+                    class="tempCheck"
+                  />Confident</label
+                >
+                <label for="aggressive" class="check-label"
+                  ><input
+                    type="checkbox"
+                    name="temperament"
+                    id="aggressive"
+                    value="aggressive"
+                    class="tempCheck"
+                  />Aggressive</label
+                >
+                <label for="obedient" class="check-label"
+                  ><input
+                    type="checkbox"
+                    name="temperament"
+                    id="obedient"
+                    value="obedient"
+                    class="tempCheck"
+                  />Obedient</label
+                >
+              </div>
+            </div>
           </div>
-          <div class="button-container">
-            <input type="submit" value="submit" />
-          </div>
+        </div>
+        <div class="button-container">
+          <input type="submit" value="submit" class="submit" />
         </div>
       </form>
     </section>
