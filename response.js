@@ -1,69 +1,30 @@
 console.log('Hello from scripts!');
 
-let dogArray = [
-  {
-    name: 'Buddy',
-    age: '6 months',
-    breed: 'Golden Retriever',
-    gender: 'Male',
-    image: './images/buddy.jpeg',
-  },
-  {
-    name: 'Fluffy',
-    age: '2 years',
-    breed: 'Springer spaniel',
-    gender: 'Female',
-    image: './images/buddy.jpeg',
-  },
-  {
-    name: 'Ralph',
-    age: '18 years',
-    breed: 'Golden Retriever',
-    gender: 'Female',
-    image: './images/buddy.jpeg',
-  },
-  {
-    name: 'Whiskey',
-    age: '6 years',
-    breed: 'Yorkshire Terrier',
-    gender: 'Male',
-    image: './images/buddy.jpeg',
-  },
-  {
-    name: 'Hamish',
-    age: '7 years',
-    breed: 'Scottish Terrier',
-    gender: 'Male',
-    image: './images/buddy.jpeg',
-  },
-  {
-    name: 'Wilson',
-    age: '2 years',
-    breed: 'cockerpoo',
-    gender: 'Male',
-    image: './images/buddy.jpeg',
-  },
-  {
-    name: 'Sebby',
-    age: '4 years',
-    breed: 'Border Collie',
-    gender: 'Male',
-    image: './images/buddy.jpeg',
-  },
-  {
-    name: 'Alice',
-    age: '6 months',
-    breed: 'Whippet',
-    gender: 'Female',
-    image: './images/buddy.jpeg',
-  },
-];
+sessionInfo = sessionStorage.getItem("formData");
+// Doesn't display correctly when client is running on a live server
+console.log(JSON.parse(sessionInfo));
+
+
+
 
 async function getDogs() {
-  const response = await fetch('http://localhost:3000/dogs');
+  const sessionInfo = sessionStorage.getItem("formData");
+  const request = JSON.parse(sessionInfo);
+
+  const options = {
+     method: "POST",
+     headers: {
+       "Content-Type": "application/json",
+       accept: "application/json",
+     },
+     body: JSON.stringify(request),
+   };
+  
+   const response = await fetch("http://localhost:3000/dogs", options);
+
   const data = await response.json();
   return data;
-}
+ }
 
 async function displayAnimal() {
   const arr = await getDogs();
@@ -109,7 +70,7 @@ function directToSocials(event) {
 }
 
 displayAnimal();
-getDogs();
+//getDogs();
 
 const twitter = document.querySelector('.fa-twitter');
 const instagram = document.querySelector('.fa-instagram');

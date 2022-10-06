@@ -20,21 +20,8 @@ async function sendUserData(e) {
     temperament: filterCheckboxes(e.target.temperament),
   };
 
-  const options = {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      accept: "application/json",
-    },
-    body: JSON.stringify(data),
-  };
+  sessionStorage.setItem("formData", JSON.stringify(data));
 
-  const response = await fetch("http://localhost:3000/dogs", options);
-
-  if (response.status == 200) {
-    console.log(response);
-    window.location.href = "./response.html";
-  }
 }
 
 // return true if 1 or 2 checkboxes are checked
