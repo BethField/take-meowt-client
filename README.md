@@ -8,3 +8,9 @@
 
 ## Server
 See the server README [here](https://github.com/Khamarl/take-meowt-server/blob/main/README.md)
+
+## Featured code 
+
+## Known bugs
+
+## Key Takeaways
