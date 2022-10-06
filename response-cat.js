@@ -1,26 +1,26 @@
-console.log('Hello from scripts!');
+console.log('Hello from cat scripts!');
 
-sessionInfo = sessionStorage.getItem("formData");
+//sessionInfo = sessionStorage.getItem("formData");
 // Doesn't display correctly when client is running on a live server
-console.log(JSON.parse(sessionInfo));
+//console.log(JSON.parse(sessionInfo));
 
 
 
 
 async function getDogs() {
-  const sessionInfo = sessionStorage.getItem("formData");
-  const request = JSON.parse(sessionInfo);
+//   const sessionInfo = sessionStorage.getItem("formData");
+//   const request = JSON.parse(sessionInfo);
 
-  const options = {
-     method: "POST",
-     headers: {
-       "Content-Type": "application/json",
-       accept: "application/json",
-     },
-     body: JSON.stringify(request),
-   };
+//   const options = {
+//      method: "POST",
+//      headers: {
+//        "Content-Type": "application/json",
+//        accept: "application/json",
+//      },
+//      body: JSON.stringify(request),
+//    };
   
-   const response = await fetch("http://localhost:3000/cats", options);
+   const response = await fetch("http://localhost:3000/cats");
 
   const data = await response.json();
   return data;
@@ -36,7 +36,7 @@ async function displayAnimal() {
     data += `<div class="animal-card">
                 <a href= "profile.html?id=${arr[i]['id']}">
               <div class="animal-img">
-                <img src="./images/buddy.jpeg" alt="image of displayed dog or cat." />
+                <img src="./images/cats.png" alt="image of displayed dog or cat." />
               </div>
               <div class="animal-info">
                 <h1 class="animal-name">${arr[i]['name']}</h1>
