@@ -6,11 +6,5 @@ function filterCheckboxes(checkboxes) {
     .filter((checkbox) => checkbox.checked === true)
     .map((checkbox) => checkbox.value);
 
-  // if (checkedValues.length < 1 || checkedValues.length > 2) {
-  //     alert("Please select the corrent number of checkboxes");
-  // } else {
-  //     return checkedValues;
-  // }
-
   return checkedValues;
 }
