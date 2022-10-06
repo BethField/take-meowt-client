@@ -1,6 +1,12 @@
+let breedCount = { value: 0 };
+let sizeCount = { value: 0 };
+let tempCount = { value: 0 };
+
 // extract data from form and send to server
 async function sendUserData(e) {
+  e.preventDefault();
   await validation();
+  //   console.log(validated);
   const data = {
     birthDate: e.target.birthDate.value,
     location: e.target.location.value,
@@ -20,37 +26,41 @@ async function sendUserData(e) {
     temperament: filterCheckboxes(e.target.temperament),
   };
 
-  sessionStorage.setItem("formData", JSON.stringify(data));
+  
+  if (
+    breedCount.value > 0 &&
+    breedCount.value < 3 &&
+    sizeCount.value > 0 &&
+    sizeCount.value < 3 &&
+    tempCount.value > 0 &&
+    tempCount.value < 3
+  ) {
+    sessionStorage.setItem("formData", JSON.stringify(data));
 
-}
-
-// return true if 1 or 2 checkboxes are checked
-function validateCheckboxes(checkboxes) {
-  let validated = false;
-  // get array from the checkboes and filter the checked ones
-  let checkboxArray = Array.from(checkboxes);
-  let checked = checkboxArray.filter((checkbox) => checkbox.checked === true);
-  // if length of checked array is 1 or 2, validated === true
-  if (checked.length === 1 || checked.length === 2) {
-    console.log(checked.length);
-    validated === true;
-  } else {
-    alert("Please select the correct number of checkboxes");
+} else {
+    alert("Please");
   }
-  console.log(validated);
-  return validated;
 }
 
-// validate function called on submit.
-// gets checkboxes by class and calls validateCheckboxes() on each group
 function validation() {
   let breedBoxes = document.querySelectorAll(".breedCheck");
   let sizeBoxes = document.querySelectorAll(".sizeCheck");
   let tempBoxes = document.querySelectorAll(".tempCheck");
+  breedCount.value = 0;
+  sizeCount.value = 0;
+  tempCount.value = 0;
 
-  validateCheckboxes(breedBoxes);
-  validateCheckboxes(sizeBoxes);
-  validateCheckboxes(tempBoxes);
+  countCheckbox(breedBoxes, breedCount);
+  countCheckbox(sizeBoxes, sizeCount);
+  countCheckbox(tempBoxes, tempCount);
+}
+
+function countCheckbox(checkboxes, count) {
+  checkboxes.forEach((box) => {
+    if (box.checked) {
+      count.value += 1;
+    }
+  });
 }
 
 const form = document.querySelector("form");
