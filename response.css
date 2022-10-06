@@ -26,7 +26,7 @@ body {
   margin-bottom: 100px;
   background-color: #fef9ef;
   border-radius: 10px;
-  box-shadow: 1px 1px 1px grey;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.12), 0 1px 10px rgba(0, 0, 0, 0.24);
   
 }
 
@@ -69,8 +69,8 @@ li {
   border: solid 1px black;
   border-radius: 15px;
   width: 90%;
-  margin: 1em auto;
-  box-shadow: 1px 1px 5px grey;
+  margin: 1em auto 2em;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.12), 0 1px 10px rgba(0, 0, 0, 0.24);
   background: white;
   transition: 1s;
 }
@@ -130,7 +130,7 @@ footer {
   .response-container {
     height: 100vh;
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.12), 0 1px 10px rgba(0, 0, 0, 0.24);
-    max-width: 600px;
+    max-width: 800px;
     margin: 70px auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -142,7 +142,7 @@ footer {
   }
 
   .animal-breakdown {
-    font-size: 0.75em;
+    font-size: 0.85em;
   }
 
   .nav, footer > ul {
