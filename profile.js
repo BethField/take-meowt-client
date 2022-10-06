@@ -54,7 +54,7 @@ const animalDescription = async () => {
      ${getAnimalTemperament()} super intelligent and a keen explorer who wants to investigate every sniff, sound and sight she encounters. Lulu is looking for a dedicated owner who will continue her training and provide her with all the physical and mental stimulation she requires. She forms strong bonds, will make a loyal companion and return your affection tenfold.`
     animalAge.innerHTML = animalId.age
     moreInfo.textContent = "More Info"
-    moreInfoTrait.textContent = `Good with children: ${animalId.good_with_kids}`
+    moreInfoTrait.textContent = "Good with children:" +  goodWithKids()
     moreInfoTraitTwo.textContent = `Good with strangers: ${animalId.good_with_strangers}`
     moreInfoTraitThree.textContent = `Hypoallergenic: ${animalId.hypoallergenic}`
     breed.textContent = animalId.breed
@@ -95,6 +95,61 @@ const getAnimalGender = async () => {
     profileContainer.appendChild(animalGender)
     
 }
+//displays check or cross if animal is good with children or not 
+const goodWithKids = async () => {
+    const animalId = await getAnimalId();
+    let profileContainer = document.querySelector("#profile-container")
+    const icon = document.createElement("i")
+    icon.className = "";
+    const goodWithChildren = animalId.good_with_kids;
+    // const goodWithStrangers = animalId.good_with_strangers;
+    // const hypoallergenic = animalId.hypoallergenic;
+    console.log(goodWithChildren)
+
+    if(goodWithChildren == true) {
+        icon.className = "fa-solid fa-check"
+    } else {
+        icon.className = "fa-solid fa-xmark"
+    }
+    profileContainer.appendChild(icon);
+};
+
+//displays check or cross if animal is good with strangers or not 
+
+const goodWithStrangers = async () => {
+    const animalId = await getAnimalId();
+    let profileContainer = document.querySelector("#profile-container")
+    const icon = document.createElement("i")
+    icon.className = "";
+    const goodWithStranger = animalId.good_with_strangers;
+    // const hypoallergenic = animalId.hypoallergenic;
+    console.log(goodWithStranger)
+
+    if(goodWithStranger == true) {
+        icon.className = "fa-solid fa-check"
+    } else {
+        icon.className = "fa-solid fa-xmark"
+    }
+    profileContainer.appendChild(icon)
+}
+
+const hypoallergenic = async () => {
+    const animalId = await getAnimalId();
+    let profileContainer = document.querySelector("#profile-container")
+    const icon = document.createElement("i")
+    icon.className = "";
+    const isHypoallergenic = animalId.hypoallergenic;
+    console.log(isHypoallergenic)
+
+    if(isHypoallergenic == true) {
+        icon.className = "fa-solid fa-check"
+    } else {
+        icon.className = "fa-solid fa-xmark"
+    }
+    profileContainer.appendChild(icon)
+}
+
+//displays temperaments of selected animal 
 
 const getAnimalTemperament = async () => {
     let profileContainer = document.querySelector("#profile-container")
@@ -133,18 +188,18 @@ const chooseButton =  () => {
 //     const animalName = document.createElement("h2")
 
 // }
-const homeButton = (e) => {
-    console.log(e.target)
-    if(e.target.className == "fa-solid fa-house") {
-        window.open("file:./landing.html")
-    } 
-}
-const backButton = (e) => {
-    console.log(e.target)
-    if(e.target.className == "fa-solid fa-arrow-left"){
-        window.open("file:./response.html")
-    }
-}
+// const homeButton = (e) => {
+//     console.log(e.target)
+//     if(e.target.className == "fa-solid fa-house") {
+//         window.open("file:./landing.html")
+//     } 
+// }
+// const backButton = (e) => {
+//     console.log(e.target)
+//     if(e.target.className == "fa-solid fa-arrow-left"){
+//         window.open("file:./response.html")
+//     }
+// }
 function directToSocials(event) {
     //let classLists = event.target.classList;
     if (event.target.id === 'twitter-btn') {
@@ -153,6 +208,9 @@ function directToSocials(event) {
       window.open('https://www.instagram.com/battersea/?hl=en');
     }
   }
+
+const homeButton = () => window.open("file:./landing.html");
+const backButton = () => window.open("file:./form.html");
 
 displayAnimalData()
 const backHome = document.querySelector('.fa-house');
