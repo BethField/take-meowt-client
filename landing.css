@@ -1,14 +1,16 @@
 *{
     box-sizing: border-box;
     font-family: "Lato", sans-serif;
+    
 }
+
+
+.mySlides {display: none;}
 
 body {
     background-color: #FEF9EF;
     margin: 0 auto;
     height: 100vh;
-
-    
 }
 
 /* apply styles to header */
@@ -19,16 +21,84 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #b79e87
+    flex-direction: row;
+    background-color: #202124;
+    color: white;
+    font-size: 2em;
 }
+#logo{
+    display: flex;
+    justify-content: center;
+}
+/* nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+} */
+/* styling of carousel container to ensure all images are central */
 
+.slideshow-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+/* styling of carousel. */
 #carousel {
     display: flex;
     justify-content: center;
     margin-top: 10px;
-    height: 40vh
+    height: 39vh;
+    flex-direction: column;
+    width:100%;
 }
 
+/* styling carousel images to ensure they are all same height/width */
+.carousel-img {vertical-align: middle;}
+
+.carousel-img {
+    /* max-width: 70%; */
+    height: 240px;
+    
+}
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+/* homepage information styles */
 #home-info {
     text-align: center;
 }
@@ -36,6 +106,7 @@ body {
 #home-info h3 {
     font-size: 1.4em;
     margin-bottom: 0;
+    margin-top: 0;
 }
 
 
@@ -43,53 +114,143 @@ body {
     font-size: 1.2em;
     text-align: justify;
     text-justify: inter-word;
-    padding: 5%;
+    padding:5%;
     margin-top: 0;
+    margin-bottom: 0;
+    width: 100%;
+}
+ /* button styles */
+#cat-button:hover {
+    /* text-decoration: underline; */
+    position: relative;
+    top: 3px;
+    opacity: 0.8;
 }
 
-#cat-button :hover {
-    background-color: #b79e87;
+a:visited {
+    text-decoration: none;
+    /* color: white; */
 }
+
 #cat-button{
-    background-image: url("./images/cats.png");
-            background-size: cover;
-            width: 45%;
-            height: 147px;
-            font-size: 2rem;
-            filter: saturate(80%);
-            color: white;
-            border: none;
-            border-radius: 25px;
-            box-shadow: 5px 5px 5px black;
-            
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 45%;
+        height: 147px;
+        font-size: 2rem;
+        border: none;
+        border-radius: 25px;
+        box-shadow: 5px 5px 5px black;
+        position:relative;
+                    
 }
 
+/* sets opacity to background image but not the text */
+#cat-button::before {
+    content: "";
+    background-image: url("./images/cats.png");
+    background-size: cover;
+    opacity: 0.6;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 25px;
+    position: absolute;
+     
+  }
 
 
-#dog-button {
-    background-image: url("./images/beagle.png");
-            background-size: cover;
-            width: 45%;
-            height: 147px;
-            font-size: 2rem;
-            border: none;
-            border-radius: 25px;
-            box-shadow: 5px 5px 5px black;
-            
+
+#cat-button p {
+    color: black;
+    position: relative;
+    
+}
+#dog-button:hover {
+    /* text-decoration: underline; */
+    position: relative;
+    top: 3px;
+    opacity: 0.8;
+}
+
+/* style dog button */
+#dog-button { 
+    position: relative; 
+    height: 20vh;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+    height: 147px;
+    font-size: 2rem;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 5px 5px 5px black;
+  }
+
+/* sets opacity to background image but not the text */
+
+  #dog-button::before {  
+    content: "";
+    background-image: url('./images/beagle.png');
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.6;
+    border-radius: 25px;
+}
+#dog-button p {
+    position: relative;
+    color: black;
 }
 
 #buttons {
     display: flex;
     justify-content: space-around;
-    
+    margin-bottom: 7%;
     align-items: center;
 }
 
+/* Styling for footer */
+
 #footer {
-    background-color: #b79e87;
-    height: 50px;
-    padding: 10px;
+    background-color: #202124;
+    /* height: 50px; */
+    padding: 0.5em;
     margin-top: 10px;
     position: sticky;
     bottom: 0;
+    
 }
+
+#footer ul {
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+/* styling for icons in footer area  */
+.social-icon {
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+    font-size: 2em;
+    text-align: center;
+    color: white;
+    
+}
+.social-icon:hover {
+    color: #0377B6;
+    cursor: pointer;
+    position: relative;
+    top: 3px;
+  }
+
+
