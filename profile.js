@@ -33,21 +33,44 @@ const animalDescription = async () => {
     try{
     const animalId = await getAnimalId();
     let profileContainer = document.querySelector("#profile-container")
+
     const animalImg = document.createElement("img")
     const animalName = document.createElement("h2")
     const animalDescription = document.createElement("p")
     const animalAge = document.createElement("p")
+    const moreInfo = document.createElement("h3")
+    const moreInfoTrait = document.createElement("p")
+    const moreInfoTraitTwo = document.createElement("p")
+    const moreInfoTraitThree = document.createElement("p")
+    const breed = document.createElement("p")
+
     animalImg.src = "./images/beagle.png" 
-    animalName.textContent = animalId.name 
-    animalDescription.textContent = "Gorgeous Lulu is an incredibly sweet girl. While she hasn't had the best start in life and can be a little wary of people when she first meets them, this hasn't dented her enthusiasm or her ability to quickly make friends. She is super intelligent and a keen explorer who wants to investigate every sniff, sound and sight she encounters. Lulu is looking for a dedicated owner who will continue her training and provide her with all the physical and mental stimulation she requires. She forms strong bonds, will make a loyal companion and return your affection tenfold."
+    animalName.textContent = animalId.name;
+    animalImg.className = "profile-picture"
+    animalName.className = "animal-name" 
+    animalDescription.className = "animal-description" 
+    animalAge.className = "animal-age" 
+    animalDescription.textContent = `${animalId.name} is an incredibly sweet ${animalId.gender}. While she hasn't had the best start in life and can be a little wary of people when she first meets them, this hasn't dented her enthusiasm or her ability to quickly make friends. ${animalId.name} is: 
+     ${getAnimalTemperament()} super intelligent and a keen explorer who wants to investigate every sniff, sound and sight she encounters. Lulu is looking for a dedicated owner who will continue her training and provide her with all the physical and mental stimulation she requires. She forms strong bonds, will make a loyal companion and return your affection tenfold.`
     animalAge.innerHTML = animalId.age
-    profileContainer.appendChild(animalImg) 
-    profileContainer.appendChild(animalName)
-    profileContainer.appendChild(animalAge)
-    getAnimalGender()
-    profileContainer.appendChild(animalDescription)
+    moreInfo.textContent = "More Info"
+    moreInfoTrait.textContent = `Good with children: ${animalId.good_with_kids}`
+    moreInfoTraitTwo.textContent = `Good with strangers: ${animalId.good_with_strangers}`
+    moreInfoTraitThree.textContent = `Hypoallergenic: ${animalId.hypoallergenic}`
+    breed.textContent = animalId.breed
+
+    profileContainer.appendChild(animalImg);
+    profileContainer.appendChild(animalName);
+    profileContainer.appendChild(breed);
+    profileContainer.appendChild(animalAge);
+    getAnimalGender();
+    profileContainer.appendChild(animalDescription);
+    profileContainer.appendChild(moreInfo);
+    getAnimalTemperament()
+    profileContainer.appendChild(moreInfoTrait);
+    profileContainer.appendChild(moreInfoTraitTwo);
+    profileContainer.appendChild(moreInfoTraitThree);
     chooseButton()
-    
 
     } catch (e) {
         console.log({error: e})
@@ -72,6 +95,20 @@ const getAnimalGender = async () => {
     profileContainer.appendChild(animalGender)
     
 }
+
+const getAnimalTemperament = async () => {
+    let profileContainer = document.querySelector("#profile-container")
+    const animalId = await getAnimalId();
+    const temperament = animalId.temperament;
+    temperament.forEach(trait => {
+        const list = document.createElement("li")
+        list.textContent = trait
+        profileContainer.appendChild(list)
+    })
+
+}
+
+// getAnimalTemperament()
 //dynamically inserts button to choose and open sumbission page once clicked
 const chooseButton =  () => {
     let profileContainer = document.querySelector("#profile-container");
@@ -85,7 +122,7 @@ const chooseButton =  () => {
     })
 
     const chooseButton = document.createElement("button");
-    chooseButton.textContent = "Choose this pet"
+    chooseButton.textContent = "Choose pet"
     chooseButton.classList.add('choose-button')
     profileContainer.appendChild(chooseButton)
 }
@@ -127,4 +164,6 @@ const twitter = document.querySelector('.fa-twitter');
 const instagram = document.querySelector('.fa-instagram');
 twitter.addEventListener('click', directToSocials);
 instagram.addEventListener('click', directToSocials);
+
+
 

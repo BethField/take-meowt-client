@@ -1,3 +1,5 @@
+/* universal and body styles */
+
 *{
     box-sizing: border-box;
     font-family: "Lato", sans-serif;
@@ -9,7 +11,7 @@ body {
     margin: 0 auto;
     height: 100vh;
 }
-
+/* styling of header  */
 .nav {
     position: fixed;
     z-index: 1;
@@ -36,15 +38,36 @@ footer > ul {
   flex-wrap: wrap;
   justify-content: space-around;
 }
-
+/* styling of dynamic elements. classes are named in profile.js */
 .profile-container {
   display: flex;
   flex-direction: column;
   height: 40vh;
-  /* margin-top: 300px; */
-  padding-top: 30%;
+  margin-top: 30%;
+  padding: 10%;
+}
+.profile-picture{
+  border-radius: 25px;
+}
+.choose-button {
+  display: block;
+  width: 100px;
+  height: 40px;
+  border: none;
+  margin: 0 auto;
+  border-radius: 10px;
+  font-size: 15px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+  line-height: 35px;
 }
 
+.animal-description {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* styling of buttons and footer */
 ul {
   margin: 0;
   padding: 0;
@@ -66,3 +89,5 @@ footer {
     background-color: #202124;
     color: rgba(255, 255, 255, 0.921);
   }
+
+  
