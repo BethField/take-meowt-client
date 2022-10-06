@@ -1,6 +1,7 @@
 console.log('Hello from scripts!');
 
 sessionInfo = sessionStorage.getItem("formData");
+// Doesn't display correctly when client is running on a live server
 console.log(JSON.parse(sessionInfo));
 
 
