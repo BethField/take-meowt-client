@@ -38,117 +38,96 @@ const animalDescription = async () => {
     const animalName = document.createElement("h2")
     const animalDescription = document.createElement("p")
     const animalAge = document.createElement("p")
-    const moreInfo = document.createElement("h3")
-    const moreInfoTrait = document.createElement("p")
-    const moreInfoTraitTwo = document.createElement("p")
-    const moreInfoTraitThree = document.createElement("p")
     const breed = document.createElement("p")
+    const aboutMe = document.createElement("h3")
 
-    animalImg.src = "./images/beagle.png" 
-    animalName.textContent = animalId.name;
+    
     animalImg.className = "profile-picture"
     animalName.className = "animal-name" 
     animalDescription.className = "animal-description" 
-    animalAge.className = "animal-age" 
-    animalDescription.textContent = `${animalId.name} is an incredibly sweet ${animalId.gender}. While she hasn't had the best start in life and can be a little wary of people when she first meets them, this hasn't dented her enthusiasm or her ability to quickly make friends. ${animalId.name} is: 
-     ${getAnimalTemperament()} super intelligent and a keen explorer who wants to investigate every sniff, sound and sight she encounters. Lulu is looking for a dedicated owner who will continue her training and provide her with all the physical and mental stimulation she requires. She forms strong bonds, will make a loyal companion and return your affection tenfold.`
-    animalAge.innerHTML = animalId.age
-    moreInfo.textContent = "More Info"
-    moreInfoTrait.textContent = "Good with children:" +  goodWithKids()
-    moreInfoTraitTwo.textContent = `Good with strangers: ${animalId.good_with_strangers}`
-    moreInfoTraitThree.textContent = `Hypoallergenic: ${animalId.hypoallergenic}`
-    breed.textContent = animalId.breed
+    animalAge.className = "animal-age"
+    aboutMe.className = "about-me"
+    breed.className = "breed"
+ 
 
+    animalImg.src = "./images/beagle.png" 
+    animalName.textContent = ` ${animalId.name}  ${checkGender(animalId.gender)}`;
+    animalDescription.textContent = `${animalId.name} is an incredibly sweet ${animalId.gender}. While she hasn't had the best start in life and can be a little wary of people when she first meets them, this hasn't dented her enthusiasm or her ability to quickly make friends. ${animalId.name} is: 
+    super intelligent and a keen explorer who wants to investigate every sniff, sound and sight she encounters.`
+
+    animalAge.textContent = `Age: ${animalId.age} years old`
+    
+    breed.textContent = ` Breed: ${animalId.breed} `
+    aboutMe.textContent = "About me "
+    // const animalGender = await getAnimalGender()
+
+    // const animalGender = await getAnimalGender()
     profileContainer.appendChild(animalImg);
     profileContainer.appendChild(animalName);
     profileContainer.appendChild(breed);
     profileContainer.appendChild(animalAge);
-    getAnimalGender();
+    profileContainer.appendChild(aboutMe);
+
+
+    
+
+    // getAnimalGender();
     profileContainer.appendChild(animalDescription);
-    profileContainer.appendChild(moreInfo);
-    getAnimalTemperament()
-    profileContainer.appendChild(moreInfoTrait);
-    profileContainer.appendChild(moreInfoTraitTwo);
-    profileContainer.appendChild(moreInfoTraitThree);
-    chooseButton()
+    
+   
+   
 
     } catch (e) {
         console.log({error: e})
     }
 
 }
+
+const displayMoreInfo = async () => {
+    const animalId = await getAnimalId();
+
+    let moreInformation = document.querySelector('#more-info-section');
+    console.log(moreInformation)
+    const moreInfo = document.createElement("h3")
+    const moreInfoTrait = document.createElement("p")
+    const moreInfoTraitTwo = document.createElement("p")
+    const moreInfoTraitThree = document.createElement("p")
+
+    moreInfo.className = "more-info-title"
+
+    moreInfo.textContent = "More Info"
+    moreInfoTrait.textContent = "Good with children: " +  checkorCross(animalId.good_with_kids)
+    moreInfoTraitTwo.textContent = `Good with strangers:  ${checkorCross(animalId.good_with_strangers)}`
+    moreInfoTraitThree.textContent = `Hypoallergenic:  ${checkorCross(animalId.hypoallergenic)}`
+
+    moreInformation.appendChild(moreInfo) 
+    moreInformation.appendChild(moreInfoTrait)
+    moreInformation.appendChild(moreInfoTraitTwo)
+    moreInformation.appendChild(moreInfoTraitThree)
+    // chooseButton()
+
+}
+
+
+//displays check or cross if animal property returns true or false 
+
+const checkorCross =  (val) => {
+
+    if(val == true) {
+        return '☑️'
+    } else {
+       return "❌"
+    }
+};
 //displays male or female icon depending on gender 
 
-const getAnimalGender = async () => {
-    const animalId = await getAnimalId();
-    console.log(animalId.gender)
-    let profileContainer = document.querySelector("#profile-container");
-    const animalGender = document.createElement("i");
-    animalGender.className = ""
-    if(animalId.gender == "female"){
-        animalGender.className = "fa-solid fa-venus";
-
+const checkGender = (val) => {
+    if (val == "female") {
+        return '♀'
     } else {
-         
-        animalGender.className = "fa-solid fa-mars";
+        return '⚦'
     }
-    profileContainer.appendChild(animalGender)
-    
 }
-//displays check or cross if animal is good with children or not 
-const goodWithKids = async () => {
-    const animalId = await getAnimalId();
-    let profileContainer = document.querySelector("#profile-container")
-    const icon = document.createElement("i")
-    icon.className = "";
-    const goodWithChildren = animalId.good_with_kids;
-    // const goodWithStrangers = animalId.good_with_strangers;
-    // const hypoallergenic = animalId.hypoallergenic;
-    console.log(goodWithChildren)
-
-    if(goodWithChildren == true) {
-        icon.className = "fa-solid fa-check"
-    } else {
-        icon.className = "fa-solid fa-xmark"
-    }
-    profileContainer.appendChild(icon);
-};
-
-//displays check or cross if animal is good with strangers or not 
-
-const goodWithStrangers = async () => {
-    const animalId = await getAnimalId();
-    let profileContainer = document.querySelector("#profile-container")
-    const icon = document.createElement("i")
-    icon.className = "";
-    const goodWithStranger = animalId.good_with_strangers;
-    // const hypoallergenic = animalId.hypoallergenic;
-    console.log(goodWithStranger)
-
-    if(goodWithStranger == true) {
-        icon.className = "fa-solid fa-check"
-    } else {
-        icon.className = "fa-solid fa-xmark"
-    }
-    profileContainer.appendChild(icon)
-}
-
-const hypoallergenic = async () => {
-    const animalId = await getAnimalId();
-    let profileContainer = document.querySelector("#profile-container")
-    const icon = document.createElement("i")
-    icon.className = "";
-    const isHypoallergenic = animalId.hypoallergenic;
-    console.log(isHypoallergenic)
-
-    if(isHypoallergenic == true) {
-        icon.className = "fa-solid fa-check"
-    } else {
-        icon.className = "fa-solid fa-xmark"
-    }
-    profileContainer.appendChild(icon)
-}
-
 //displays temperaments of selected animal 
 
 const getAnimalTemperament = async () => {
@@ -165,22 +144,22 @@ const getAnimalTemperament = async () => {
 
 // getAnimalTemperament()
 //dynamically inserts button to choose and open sumbission page once clicked
-const chooseButton =  () => {
-    let profileContainer = document.querySelector("#profile-container");
-    profileContainer.addEventListener("click", function (e){
-        if(e.target.classList.contains('choose-button')){
-            window.open("file:./success.html")
-        }else {
-            console.log("error")
-        }
+// const chooseButton =  () => {
+//     let profileContainer = document.querySelector("#profile-container");
+//     profileContainer.addEventListener("click", function (e){
+//         if(e.target.classList.contains('choose-button')){
+//             window.open("file:./success.html")
+//         }else {
+//             console.log("error")
+//         }
 
-    })
+//     })
 
-    const chooseButton = document.createElement("button");
-    chooseButton.textContent = "Choose pet"
-    chooseButton.classList.add('choose-button')
-    profileContainer.appendChild(chooseButton)
-}
+//     const chooseButton = document.createElement("button");
+//     chooseButton.textContent = "Choose pet"
+//     chooseButton.classList.add('choose-button')
+//     profileContainer.appendChild(chooseButton)
+// }
 
 // const similarAnimal = async () => {
 //     const animalId = await getAnimalId();
@@ -213,6 +192,7 @@ const homeButton = () => window.open("file:./landing.html");
 const backButton = () => window.open("file:./form.html");
 
 displayAnimalData()
+displayMoreInfo()
 const backHome = document.querySelector('.fa-house');
 backHome.addEventListener("click", homeButton)
 const previousPage = document.querySelector('.fa-arrow-left')
