@@ -33,62 +33,133 @@ const animalDescription = async () => {
     try{
     const animalId = await getAnimalId();
     let profileContainer = document.querySelector("#profile-container")
+
     const animalImg = document.createElement("img")
     const animalName = document.createElement("h2")
     const animalDescription = document.createElement("p")
     const animalAge = document.createElement("p")
-    animalImg.src = "./images/beagle.png" 
-    animalName.textContent = animalId.name 
-    animalDescription.textContent = "Gorgeous Lulu is an incredibly sweet girl. While she hasn't had the best start in life and can be a little wary of people when she first meets them, this hasn't dented her enthusiasm or her ability to quickly make friends. She is super intelligent and a keen explorer who wants to investigate every sniff, sound and sight she encounters. Lulu is looking for a dedicated owner who will continue her training and provide her with all the physical and mental stimulation she requires. She forms strong bonds, will make a loyal companion and return your affection tenfold."
-    animalAge.innerHTML = animalId.age
-    profileContainer.appendChild(animalImg) 
-    profileContainer.appendChild(animalName)
-    profileContainer.appendChild(animalAge)
-    getAnimalGender()
-    profileContainer.appendChild(animalDescription)
-    chooseButton()
+    const breed = document.createElement("p")
+    const aboutMe = document.createElement("h3")
+
     
+    animalImg.className = "profile-picture"
+    animalName.className = "animal-name" 
+    animalDescription.className = "animal-description" 
+    animalAge.className = "animal-age"
+    aboutMe.className = "about-me"
+    breed.className = "breed"
+ 
+
+    animalImg.src = "./images/beagle.png" 
+    animalName.textContent = ` ${animalId.name}  ${checkGender(animalId.gender)}`;
+    animalDescription.textContent = `${animalId.name} is an incredibly sweet ${animalId.gender}. While she hasn't had the best start in life and can be a little wary of people when she first meets them, this hasn't dented her enthusiasm or her ability to quickly make friends. ${animalId.name} is: 
+    super intelligent and a keen explorer who wants to investigate every sniff, sound and sight she encounters.`
+
+    animalAge.textContent = `Age: ${animalId.age} years old`
+    
+    breed.textContent = ` Breed: ${animalId.breed} `
+    aboutMe.textContent = "About me "
+    // const animalGender = await getAnimalGender()
+
+    // const animalGender = await getAnimalGender()
+    profileContainer.appendChild(animalImg);
+    profileContainer.appendChild(animalName);
+    profileContainer.appendChild(breed);
+    profileContainer.appendChild(animalAge);
+    profileContainer.appendChild(aboutMe);
+
+
+    
+
+    // getAnimalGender();
+    profileContainer.appendChild(animalDescription);
+    
+   
+   
 
     } catch (e) {
         console.log({error: e})
     }
 
 }
+
+const displayMoreInfo = async () => {
+    const animalId = await getAnimalId();
+
+    let moreInformation = document.querySelector('#more-info-section');
+    console.log(moreInformation)
+    const moreInfo = document.createElement("h3")
+    const moreInfoTrait = document.createElement("p")
+    const moreInfoTraitTwo = document.createElement("p")
+    const moreInfoTraitThree = document.createElement("p")
+
+    moreInfo.className = "more-info-title"
+
+    moreInfo.textContent = "More Info"
+    moreInfoTrait.textContent = "Good with children: " +  checkorCross(animalId.good_with_kids)
+    moreInfoTraitTwo.textContent = `Good with strangers:  ${checkorCross(animalId.good_with_strangers)}`
+    moreInfoTraitThree.textContent = `Hypoallergenic:  ${checkorCross(animalId.hypoallergenic)}`
+
+    moreInformation.appendChild(moreInfo) 
+    moreInformation.appendChild(moreInfoTrait)
+    moreInformation.appendChild(moreInfoTraitTwo)
+    moreInformation.appendChild(moreInfoTraitThree)
+    // chooseButton()
+
+}
+
+
+//displays check or cross if animal property returns true or false 
+
+const checkorCross =  (val) => {
+
+    if(val == true) {
+        return '☑️'
+    } else {
+       return "❌"
+    }
+};
 //displays male or female icon depending on gender 
 
-const getAnimalGender = async () => {
-    const animalId = await getAnimalId();
-    console.log(animalId.gender)
-    let profileContainer = document.querySelector("#profile-container");
-    const animalGender = document.createElement("i");
-    animalGender.className = ""
-    if(animalId.gender == "female"){
-        animalGender.className = "fa-solid fa-venus";
-
+const checkGender = (val) => {
+    if (val == "female") {
+        return '♀'
     } else {
-         
-        animalGender.className = "fa-solid fa-mars";
+        return '⚦'
     }
-    profileContainer.appendChild(animalGender)
-    
 }
-//dynamically inserts button to choose and open sumbission page once clicked
-const chooseButton =  () => {
-    let profileContainer = document.querySelector("#profile-container");
-    profileContainer.addEventListener("click", function (e){
-        if(e.target.classList.contains('choose-button')){
-            window.open("file:./success.html")
-        }else {
-            console.log("error")
-        }
+//displays temperaments of selected animal 
 
+const getAnimalTemperament = async () => {
+    let profileContainer = document.querySelector("#profile-container")
+    const animalId = await getAnimalId();
+    const temperament = animalId.temperament;
+    temperament.forEach(trait => {
+        const list = document.createElement("li")
+        list.textContent = trait
+        profileContainer.appendChild(list)
     })
 
-    const chooseButton = document.createElement("button");
-    chooseButton.textContent = "Choose this pet"
-    chooseButton.classList.add('choose-button')
-    profileContainer.appendChild(chooseButton)
 }
+
+// getAnimalTemperament()
+//dynamically inserts button to choose and open sumbission page once clicked
+// const chooseButton =  () => {
+//     let profileContainer = document.querySelector("#profile-container");
+//     profileContainer.addEventListener("click", function (e){
+//         if(e.target.classList.contains('choose-button')){
+//             window.open("file:./success.html")
+//         }else {
+//             console.log("error")
+//         }
+
+//     })
+
+//     const chooseButton = document.createElement("button");
+//     chooseButton.textContent = "Choose pet"
+//     chooseButton.classList.add('choose-button')
+//     profileContainer.appendChild(chooseButton)
+// }
 
 // const similarAnimal = async () => {
 //     const animalId = await getAnimalId();
@@ -96,18 +167,18 @@ const chooseButton =  () => {
 //     const animalName = document.createElement("h2")
 
 // }
-const homeButton = (e) => {
-    console.log(e.target)
-    if(e.target.className == "fa-solid fa-house") {
-        window.open("file:./landing.html")
-    } 
-}
-const backButton = (e) => {
-    console.log(e.target)
-    if(e.target.className == "fa-solid fa-arrow-left"){
-        window.open("file:./response.html")
-    }
-}
+// const homeButton = (e) => {
+//     console.log(e.target)
+//     if(e.target.className == "fa-solid fa-house") {
+//         window.open("file:./landing.html")
+//     } 
+// }
+// const backButton = (e) => {
+//     console.log(e.target)
+//     if(e.target.className == "fa-solid fa-arrow-left"){
+//         window.open("file:./response.html")
+//     }
+// }
 function directToSocials(event) {
     //let classLists = event.target.classList;
     if (event.target.id === 'twitter-btn') {
@@ -117,7 +188,11 @@ function directToSocials(event) {
     }
   }
 
+const homeButton = () => window.open("file:./landing.html" , "_self");
+const backButton = () => window.open("file:./response.html", "_self" );
+
 displayAnimalData()
+displayMoreInfo()
 const backHome = document.querySelector('.fa-house');
 backHome.addEventListener("click", homeButton)
 const previousPage = document.querySelector('.fa-arrow-left')
@@ -127,4 +202,6 @@ const twitter = document.querySelector('.fa-twitter');
 const instagram = document.querySelector('.fa-instagram');
 twitter.addEventListener('click', directToSocials);
 instagram.addEventListener('click', directToSocials);
+
+
 

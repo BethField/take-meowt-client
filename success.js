@@ -18,7 +18,7 @@ const backToHome = () => {
     goBackHome.addEventListener("click", function (e){
         console.log(e.target.innerHTML)
         if(e.target.innerHTML = 'Back to home'){
-            window.open("file:./landing.html")
+            window.open("file:./landing.html", "_self")
         }else {
             console.log("error")
         }
