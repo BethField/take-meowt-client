@@ -5,7 +5,7 @@
 
 body {
   margin: 0 auto;
-  background-color: #fef9ef;
+  background-color: white;
 }
 
 .nav {
@@ -24,6 +24,10 @@ body {
 .response-container {
   margin-top: 100px;
   margin-bottom: 100px;
+  background-color: #fef9ef;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px grey;
+  
 }
 
 li:hover {
@@ -120,4 +124,28 @@ footer {
   text-align: center;
   background-color: #202124;
   color: rgba(255, 255, 255, 0.921);
+}
+
+@media (min-width: 700px) {
+  .response-container {
+    height: 100vh;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.12), 0 1px 10px rgba(0, 0, 0, 0.24);
+    max-width: 600px;
+    margin: 70px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+
+  .animal-name {
+    font-size: 1.5em;
+  }
+
+  .animal-breakdown {
+    font-size: 0.75em;
+  }
+
+  .nav, footer > ul {
+    justify-content: space-evenly;
+  }
 }
