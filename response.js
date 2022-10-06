@@ -96,8 +96,12 @@ function directToSocials(event) {
   }
 }
 
-displayAnimal();
-getDogs();
+// displayAnimal();
+// getDogs();
+
+const data = sessionStorage.getItem("formData")
+
+console.log(JSON.parse(data))
 
 const twitter = document.querySelector('.fa-twitter');
 const instagram = document.querySelector('.fa-instagram');
