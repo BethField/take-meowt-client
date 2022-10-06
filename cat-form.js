@@ -30,7 +30,7 @@ async function sendUserData(e) {
     tempCount.value < 3
   ) {
     sessionStorage.setItem("formData", JSON.stringify(data));
-    window.location.href = `./response.html`;
+    window.location.href = `./response-cat.html`;
   } else {
     alert("Please");
   }
@@ -56,3 +56,30 @@ function countCheckbox(checkboxes, count) {
 
 const form = document.querySelector("form");
 form.addEventListener("submit", sendUserData);
+
+// header, footer buttons
+
+function directToSocials(event) {
+  console.log(event.target.className);
+  //let classLists = event.target.classList;
+  if (event.target.id === "twitter-btn") {
+    window.open("https://twitter.com/Battersea_");
+  } else {
+    window.open("https://www.instagram.com/battersea/?hl=en");
+  }
+}
+
+const twitter = document.querySelector(".fa-twitter");
+const instagram = document.querySelector(".fa-instagram");
+twitter.addEventListener("click", directToSocials);
+instagram.addEventListener("click", directToSocials);
+
+const homeButton = document.querySelector(".fa-arrow-left");
+homeButton.addEventListener("click", () => {
+  window.open("file:./landing.html");
+});
+
+const backButton = document.querySelector(".fa-house");
+backButton.addEventListener("click", () => {
+  window.open("file:./landing.html");
+});

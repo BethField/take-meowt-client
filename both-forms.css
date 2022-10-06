@@ -81,7 +81,11 @@ form {
 }
 
 .questions {
-  padding: 0 15px;
+  padding: 0 20px;
+}
+
+.lifestyle-questions {
+  padding-left: 15px;
 }
 
 .button-container {
@@ -158,4 +162,17 @@ footer {
   text-align: center;
   background-color: #202124;
   color: rgba(255, 255, 255, 0.921);
+}
+
+@media (min-width: 600px) {
+  .questions {
+    width: 500px;
+    margin: 0 auto;
+    padding-left: 100px;
+  }
+  .lifestyle-questions {
+    width: 500px;
+    margin: 0 auto;
+    padding-left: 150px;
+  }
 }
