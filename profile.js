@@ -188,8 +188,8 @@ function directToSocials(event) {
     }
   }
 
-const homeButton = () => window.open("file:./landing.html");
-const backButton = () => window.open("file:./form.html");
+const homeButton = () => window.open("file:./landing.html" , "_self");
+const backButton = () => window.open("file:./response.html", "_self" );
 
 displayAnimalData()
 displayMoreInfo()

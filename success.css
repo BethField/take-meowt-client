@@ -17,6 +17,7 @@ body {
     align-items: center;
     margin-top: 20px;
     height: 100%;
+    padding: 10px;
 }
 .nav {
     position: fixed;
@@ -55,6 +56,20 @@ ul {
     list-style-type: none;
   }
   
+  #back-home {
+  
+    display: block;
+    justify-content: center;
+    width: 70%;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    line-height: 35px;
+    margin: 20% auto 40px;
+  }
   footer {
       position: fixed;
       bottom: 0;
