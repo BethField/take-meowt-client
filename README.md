@@ -10,11 +10,17 @@
 ## Installation
 
 - To run this repo, you need to have the latest version of node installed 
-- This repo works in conjunction with the ` take-meowt-server ` repository.
+- This repo works in conjunction with the ` take-meowt-server ` repository. Find the take-meowt-server repository [here]( https://github.com/Khamarl/take-meowt-server)
 - Run ` npm i -D ` from the `take-meowt-server` repository to install all the necessary packages to run this application 
 
 
 ## Development 
 
-- This application can be run locally on `http:localhost:3000`. The routes o
+- This application can be run locally on `http:localhost:3000`.
 - To run the development server, `npm run dev ` must be run from the server, found in the `take-meowt-server` repository 
+
+## Featured code 
+
+## Known bugs
+
+## Key Takeaways 
