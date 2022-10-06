@@ -16,6 +16,7 @@
     <script src="./helpers.js" defer></script>
     <script src="./cat-form.js" defer></script>
     <link href="./cat-form.css" rel="stylesheet" />
+    <link href="./both-forms.css" rel="stylesheet" />
   </head>
   <body>
     <header class="header">
@@ -187,8 +188,8 @@
             <label for="work-home-yes"
               ><input
                 type="radio"
-                name="work-home-yes"
-                id="yes"
+                name="workHome"
+                id="work-home-yes"
                 value="yes"
                 required
               />Yes</label
@@ -196,8 +197,8 @@
             <label for="work-home-no"
               ><input
                 type="radio"
-                name="work-home-no"
-                id="no"
+                name="workHome"
+                id="work-home-no"
                 value="no"
               />No</label
             ><br />
@@ -229,7 +230,7 @@
                 id="exp-no"
                 value="no"
               />No</label
-            ><br />
+            ><br /><br />
 
             <label for="number-of-pets" class="question-title"
               >How many pets do you currently own</label

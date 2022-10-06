@@ -72,22 +72,6 @@ form {
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.12), 0 1px 10px rgba(0, 0, 0, 0.24);
 }
 
-#about-you {
-  height: 500px;
-}
-
-#lifestyle {
-  height: 650px;
-}
-
-#pet-experience {
-  height: 450px;
-}
-
-#preferences {
-  height: 500px;
-}
-
 .box-title {
   text-align: center;
 }
