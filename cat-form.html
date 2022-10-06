@@ -16,6 +16,7 @@
     <script src="./helpers.js" defer></script>
     <script src="./cat-form.js" defer></script>
     <link href="./cat-form.css" rel="stylesheet" />
+    <link href="./both-forms.css" rel="stylesheet" />
   </head>
   <body>
     <header class="header">
@@ -183,84 +184,12 @@
               />Multiple times a month</label
             ><br />
 
-            <p class="question-title">How often do you exercise?</p>
-            <label for="rarely"
-              ><input
-                type="radio"
-                name="exercise"
-                id="rarely"
-                value="rarely"
-                required
-              />Rarely</label
-            ><br />
-            <label for="once-per-month"
-              ><input
-                type="radio"
-                name="exercise"
-                id="once-per-month"
-                value="once-per-month"
-              />Once a month</label
-            ><br />
-            <label for="few-times-month"
-              ><input
-                type="radio"
-                name="exercise"
-                id="few-times-month"
-                value="few-times-month"
-              />A few times a month</label
-            ><br />
-            <label for="once-per-week"
-              ><input
-                type="radio"
-                name="exercise"
-                id="once-per-week"
-                value="once-per-week"
-              />Once a week</label
-            ><br />
-            <label for="many-per-week"
-              ><input
-                type="radio"
-                name="exercise"
-                id="many-per-week"
-                value="many-per-week"
-              />Multiple times a week</label
-            ><br />
-            <label for="every-day"
-              ><input
-                type="radio"
-                name="exercise"
-                id="every-day"
-                value="every-day"
-              />Every day</label
-            ><br />
-
-            <p class="question-title">
-              Are you able to take dogs on long walks (>40 mins)?
-            </p>
-            <label for="walks-yes"
-              ><input
-                type="radio"
-                name="walks"
-                id="walks-yes"
-                value="yes"
-                required
-              />Yes</label
-            >
-            <label for="walks-no"
-              ><input
-                type="radio"
-                name="walks"
-                id="walks-no"
-                value="no"
-              />No</label
-            ><br />
-
             <p class="question-title">Do you work from home?</p>
             <label for="work-home-yes"
               ><input
                 type="radio"
-                name="work-home-yes"
-                id="yes"
+                name="workHome"
+                id="work-home-yes"
                 value="yes"
                 required
               />Yes</label
@@ -268,8 +197,8 @@
             <label for="work-home-no"
               ><input
                 type="radio"
-                name="work-home-no"
-                id="no"
+                name="workHome"
+                id="work-home-no"
                 value="no"
               />No</label
             ><br />
@@ -283,12 +212,12 @@
           <h2 class="box-title">Tell us about your experience with pets</h2>
           <div class="questions">
             <p class="question-title">
-              Do you have experience looking after dogs?
+              Do you have experience looking after cats?
             </p>
             <label for="exp-yes"
               ><input
                 type="radio"
-                name="dogExperience"
+                name="catExperience"
                 id="exp-yes"
                 value="yes"
                 required
@@ -297,11 +226,11 @@
             <label for="exp-no"
               ><input
                 type="radio"
-                name="dogExperience"
+                name="catExperience"
                 id="exp-no"
                 value="no"
               />No</label
-            ><br />
+            ><br /><br />
 
             <label for="number-of-pets" class="question-title"
               >How many pets do you currently own</label
@@ -315,11 +244,11 @@
               required
             />
 
-            <p class="question-title">Are you allergic to dogs?</p>
+            <p class="question-title">Are you allergic to cats?</p>
             <label for="allergic-yes"
               ><input
                 type="radio"
-                name="dogAllergy"
+                name="catAllergy"
                 id="allergic-yes"
                 value="yes"
                 required
@@ -328,19 +257,19 @@
             <label for="allergic-no"
               ><input
                 type="radio"
-                name="dogAllergy"
+                name="catAllergy"
                 id="allergic-no"
                 value="no"
               />No</label
             ><br />
 
             <p class="question-title">
-              Are you happy to administer dog medication?
+              Are you happy to administer cat medication?
             </p>
             <label for="meds-yes"
               ><input
                 type="radio"
-                name="dogMeds"
+                name="catMeds"
                 id="meds-yes"
                 value="yes"
                 required
@@ -349,7 +278,7 @@
             <label for="meds-no"
               ><input
                 type="radio"
-                name="dogMeds"
+                name="catMeds"
                 id="meds-no"
                 value="no"
               />No</label
@@ -366,159 +295,139 @@
             <p class="question-title">Breed (up to two):</p>
             <div class="all-breeds">
               <div class="breed-options1">
-                <label for="cocker-spaniel" class="check-label"
+                <label for="ragdoll" class="check-label"
                   ><input
                     type="checkbox"
                     name="breed"
-                    id="cocker-spaniel"
-                    value="cocker-spaniel"
+                    id="ragdoll"
+                    value="ragdoll"
                     class="breedCheck"
-                  />Cocker Spaniel</label
+                  />Ragdoll</label
                 >
-                <label for="jack-russell-terrier" class="check-label"
+                <label for="devon-rex" class="check-label"
                   ><input
                     type="checkbox"
                     name="breed"
-                    id="jack-russell-terrier"
-                    value="jack-russell-terrier"
+                    id="devon-rex"
+                    value="devon-rex"
                     class="breedCheck"
-                  />Jack Russell</label
+                  />Devon Rex</label
                 >
-                <label for="labrador" class="check-label"
+                <label for="sphynx" class="check-label"
                   ><input
                     type="checkbox"
                     name="breed"
-                    id="labrador"
-                    value="labrador"
+                    id="sphynx"
+                    value="sphynx"
                     class="breedCheck"
-                  />Labrador</label
+                  />Sphynx</label
                 >
-                <label for="doberman" class="check-label"
+                <label for="scottish-fold" class="check-label"
                   ><input
                     type="checkbox"
                     name="breed"
-                    id="doberman"
-                    value="doberman"
+                    id="scottish-fold"
+                    value="scottish-fold"
                     class="breedCheck"
-                  />Doberman</label
+                  />Scottish Fold</label
                 >
-                <label for="chihuahua" class="check-label"
+                <label for="main-coon" class="check-label"
                   ><input
                     type="checkbox"
                     name="breed"
-                    id="chihuahua"
-                    value="chihuahua"
+                    id="main-coon"
+                    value="main-coon"
                     class="breedCheck"
-                  />Chihuahua</label
+                  />Main Coon</label
                 >
               </div>
               <div class="breed-options2">
-                <label for="great-dane" class="check-label"
+                <label for="persian" class="check-label"
                   ><input
                     type="checkbox"
                     name="breed"
-                    id="great-dane"
-                    value="great-dane"
+                    id="persian"
+                    value="persian"
                     class="breedCheck"
-                  />Great Dane</label
+                  />Persian</label
                 >
-                <label for="yorkshire-terrier" class="check-label"
+                <label for="burmese" class="check-label"
                   ><input
                     type="checkbox"
                     name="breed"
-                    id="yorkshire-terrier"
-                    value="yorkshire-terrier"
+                    id="burmese"
+                    value="burmese"
                     class="breedCheck"
-                  />Yorkshire Terrier</label
+                  />Burmese</label
                 >
-                <label for="pomeranian" class="check-label"
+                <label for="cymric" class="check-label"
                   ><input
                     type="checkbox"
                     name="breed"
-                    id="pomeranian"
-                    value="pomeranian"
+                    id="cymric"
+                    value="cymric"
                     class="breedCheck"
-                  />Pomeranian</label
+                  />Cymric</label
                 >
-                <label for="maltese-terrier" class="check-label"
+                <label for="colorpoint-shorthair" class="check-label"
                   ><input
                     type="checkbox"
                     name="breed"
-                    id="maltese-terrier"
-                    value="maltese-terrier"
+                    id="colorpoint-shorthair"
+                    value="colorpoint-shorthair"
                     class="breedCheck"
-                  />Maltese Terrier</label
+                  />Colorpoint Shorthair</label
                 >
-                <label for="pug" class="check-label"
+                <label for="bombay" class="check-label"
                   ><input
                     type="checkbox"
                     name="breed"
-                    id="pug"
-                    value="pug"
+                    id="bombay"
+                    value="bombay"
                     class="breedCheck"
-                  />Pug</label
+                  />Bombay</label
+                >
+                <label for="norwegian-forest-cat" class="check-label"
+                  ><input
+                    type="checkbox"
+                    name="breed"
+                    id="norwegian-forest-cat"
+                    value="norwegian-forest-cat"
+                    class="breedCheck"
+                  />Norwegian Forest Cat</label
                 >
               </div>
             </div>
 
-            <p class="question-title">Size (up to two):</p>
-            <label for="small"
+            <p class="question-title">Would you prefer a house cat?:</p>
+            <label for="house-cat-yes"
               ><input
-                type="checkbox"
-                name="size"
-                id="small"
-                value="small"
-                class="sizeCheck"
-              />Small</label
+                type="radio"
+                name="houseCat"
+                id="house-cat-yes"
+                value="yes"
+              />Yes</label
             >
-            <label for="medium"
+            <label for="house-cat-no"
               ><input
-                type="checkbox"
-                name="size"
-                id="medium"
-                value="medium"
-                class="sizeCheck"
-              />Medium</label
-            >
-            <label for="large"
-              ><input
-                type="checkbox"
-                name="size"
-                id="large"
-                value="large"
-                class="sizeCheck"
-              />Large</label
+                type="radio"
+                name="houseCat"
+                id="house-cat-no"
+                value="no"
+              />No</label
             >
 
             <p class="question-title">Temperament (up to two):</p>
             <div class="all-temps">
               <div class="temp-options1">
-                <label for="energetic" class="check-label"
+                <label for="active" class="check-label"
                   ><input
                     type="checkbox"
                     name="temperament"
-                    id="energetic"
-                    value="energetic"
+                    id="active"
+                    value="active"
                     class="tempCheck"
-                  />Energetic</label
-                >
-                <label for="docile" class="check-label"
-                  ><input
-                    type="checkbox"
-                    name="temperament"
-                    id="docile"
-                    value="docile"
-                    class="tempCheck"
-                  />Docile</label
-                >
-                <label for="friendly" class="check-label"
-                  ><input
-                    type="checkbox"
-                    name="temperament"
-                    id="friendly"
-                    value="friendly"
-                    class="tempCheck"
-                  />Friendly</label
+                  />Active</label
                 >
                 <label for="intelligent" class="check-label"
                   ><input
@@ -529,8 +438,6 @@
                     class="tempCheck"
                   />Intelligent</label
                 >
-              </div>
-              <div class="temp-options2">
                 <label for="playful" class="check-label"
                   ><input
                     type="checkbox"
@@ -540,41 +447,70 @@
                     class="tempCheck"
                   />Playful</label
                 >
-                <label for="protective" class="check-label"
+                <label for="curious" class="check-label"
                   ><input
                     type="checkbox"
                     name="temperament"
-                    id="protective"
-                    value="protective"
+                    id="curious"
+                    value="curious"
                     class="tempCheck"
-                  />Protective</label
+                  />Curious</label
                 >
-                <label for="confident" class="check-label"
+              </div>
+              <div class="temp-options2">
+                <label for="loyal" class="check-label"
                   ><input
                     type="checkbox"
                     name="temperament"
-                    id="confident"
-                    value="confident"
+                    id="loyal"
+                    value="loyal"
                     class="tempCheck"
-                  />Confident</label
+                  />Loyal</label
                 >
-                <label for="aggressive" class="check-label"
+                <label for="friendly" class="check-label"
                   ><input
                     type="checkbox"
                     name="temperament"
-                    id="aggressive"
-                    value="aggressive"
+                    id="friendly"
+                    value="friendly"
                     class="tempCheck"
-                  />Aggressive</label
+                  />Friendly</label
                 >
-                <label for="obedient" class="check-label"
+                <label for="sociable" class="check-label"
                   ><input
                     type="checkbox"
                     name="temperament"
-                    id="obedient"
-                    value="obedient"
+                    id="sociable"
+                    value="sociable"
                     class="tempCheck"
-                  />Obedient</label
+                  />Sociable</label
+                >
+                <label for="affectionate" class="check-label"
+                  ><input
+                    type="checkbox"
+                    name="temperament"
+                    id="affectionate"
+                    value="affectionate"
+                    class="tempCheck"
+                  />Affectionate</label
+                >
+                <label for="energetic" class="check-label"
+                  ><input
+                    type="checkbox"
+                    name="temperament"
+                    id="energetic"
+                    value="energetic"
+                    class="tempCheck"
+                  />Energetic</label
+                >
+                <label for="lively" class="check-label"
+                  ><input
+                    type="checkbox"
+                    name="temperament"
+                    id="lively"
+                    value="lively"
+                    class="tempCheck"
+                  />Lively</label
                 >
               </div>
             </div>
