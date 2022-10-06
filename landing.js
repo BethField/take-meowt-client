@@ -1,6 +1,8 @@
 let slideIndex = 0;
 showSlides();
 
+//gives carousel slideshow functionality 
+
 function showSlides() {
   let i;
   let slides = document.getElementsByClassName("mySlides");
@@ -18,5 +20,21 @@ function showSlides() {
   dots[slideIndex-1].className += " active";
   setTimeout(showSlides, 7000); // Change image every 7 seconds
 }
+
+//button functionality 
+
+function directToSocials(event) {
+  //let classLists = event.target.classList;
+  if (event.target.id === 'twitter-btn') {
+    window.open('https://twitter.com/Battersea_');
+  } else {
+    window.open('https://www.instagram.com/battersea/?hl=en');
+  }
+}
+
+const twitter = document.querySelector('.fa-twitter');
+const instagram = document.querySelector('.fa-instagram');
+twitter.addEventListener('click', directToSocials);
+instagram.addEventListener('click', directToSocials);
 
 

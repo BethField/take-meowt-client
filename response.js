@@ -70,23 +70,35 @@ async function displayAnimal() {
   let responseContainer = document.getElementById('response-container');
   let data = ``;
   for (let i = 0; i < arr.length; i++) {
+
+    console.log(arr[i]['id'])
     data += `<div class="animal-card">
-            <div class="animal-img">
-              <img src="./images/buddy.jpeg" alt="image of displayed dog or cat." />
-            </div>
-            <div class="animal-info">
-              <h1 class="animal-name">${arr[i]['name']}</h1>
-              <div class="animal-breakdown">
-                <p class="animal-gender">${arr[i]['gender']}</p>
-                <p class="animal-age">${arr[i]['age']} years old</p>
-                <p class="animal-breed">${arr[i]['breed']}</p>
+                <a href= "profile.html?id=${arr[i]['id']}">
+              <div class="animal-img">
+                <img src="./images/buddy.jpeg" alt="image of displayed dog or cat." />
               </div>
-            </div>
-          </div>`;
+              <div class="animal-info">
+                <h1 class="animal-name">${arr[i]['name']}</h1>
+                <div class="animal-breakdown">
+                  <p class="animal-gender">${arr[i]['gender']}</p>
+                  <p class="animal-age">${arr[i]['age']} years old</p>
+                  <p class="animal-breed">${arr[i]['breed']}</p>
+                </div>
+              </div>
+              </a>
+            </div>`;
+          // link.href = `profile.html?=id${arr[i]['id']}`
   }
   responseContainer.innerHTML = data;
+  // responseContainer.appendChild(link)
+  // responseContainer.addEventListener('click', chosenPet)
+
 }
 
+// function chosenPet (e) {
+//  console.log(e)
+// }
+// chosenPet()
 function directToSocials(event) {
   //let classLists = event.target.classList;
   if (event.target.id === 'twitter-btn') {
@@ -103,3 +115,7 @@ const twitter = document.querySelector('.fa-twitter');
 const instagram = document.querySelector('.fa-instagram');
 twitter.addEventListener('click', directToSocials);
 instagram.addEventListener('click', directToSocials);
+
+
+
+
