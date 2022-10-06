@@ -69,11 +69,19 @@ function directToSocials(event) {
   }
 }
 
+const homeButton = () => window.open("file:./landing.html");
+const backButton = () => window.open("file:./form.html");
+
+
 displayAnimal();
 //getDogs();
 
+const backHome = document.querySelector('.fa-house');
+const previousPage = document.querySelector('.fa-arrow-left')
 const twitter = document.querySelector('.fa-twitter');
 const instagram = document.querySelector('.fa-instagram');
+previousPage.addEventListener("click", backButton)
+backHome.addEventListener("click", homeButton)
 twitter.addEventListener('click', directToSocials);
 instagram.addEventListener('click', directToSocials);
 
