@@ -26,15 +26,7 @@ async function sendUserData(e) {
     temperament: filterCheckboxes(e.target.temperament),
   };
 
-  const options = {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      accept: "application/json",
-    },
-    body: JSON.stringify(data),
-  };
-
+  
   if (
     breedCount.value > 0 &&
     breedCount.value < 3 &&
@@ -43,13 +35,9 @@ async function sendUserData(e) {
     tempCount.value > 0 &&
     tempCount.value < 3
   ) {
-    const response = await fetch("http://localhost:3000/dogs", options);
+    sessionStorage.setItem("formData", JSON.stringify(data));
 
-    if (response.status == 200) {
-      console.log(response);
-      window.location.href = "./response.html";
-    }
-  } else {
+} else {
     alert("Please");
   }
 }
