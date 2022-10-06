@@ -36,6 +36,7 @@ async function sendUserData(e) {
     tempCount.value < 3
   ) {
     sessionStorage.setItem("formData", JSON.stringify(data));
+    window.location.href = `./response.html`;
 
 } else {
     alert("Please");
