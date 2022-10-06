@@ -77,7 +77,7 @@ const chooseButton =  () => {
     let profileContainer = document.querySelector("#profile-container");
     profileContainer.addEventListener("click", function (e){
         if(e.target.classList.contains('choose-button')){
-            window.open("file:./landing.html")
+            window.open("file:.success.html")
         }else {
             console.log("error")
         }
