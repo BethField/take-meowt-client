@@ -1,0 +1,134 @@
+/* universal and body styles */
+
+*{
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+    
+}
+
+body {
+    background-color: #c9b1bd;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+/* styling of header  */
+.nav {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+    padding: 20px 15px;
+    background-color: grey;
+    font-size: 2em;
+    text-align: center;
+    background-color: #202124;
+    color: rgba(255, 255, 255, 0.921);
+  }
+
+  li:hover {
+    color: #0377b6;
+    cursor: pointer;
+    position: relative;
+    top: 3px;
+  }
+
+  .nav,
+footer > ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+/* styling of dynamic elements. classes are named in profile.js */
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  height: 40vh;
+  margin-top: 10%;
+  /* padding: 10%; */
+}
+.about-me {
+  margin-bottom: 0;
+  margin-top: 10%;
+  text-align: center;
+}
+.breed {
+  text-transform: capitalize;
+}
+.profile-picture{
+  border-radius: 25px;
+}
+
+h2 {
+  margin-bottom: 0;
+}
+p {
+  margin-bottom: 0;
+}
+
+.animal-description {
+  text-align: justify;
+  text-justify: inter-word;
+  font-weight: 300;
+  line-height: 1.5em;
+}
+#dynamic {
+  display: flex;
+  flex-direction: column;
+  min-height: 80vh;
+  padding: 10%;
+  margin: 100px auto 100px;
+  width: 90%;
+  border: solid 1px black;
+  border-radius: 15px;
+  /* margin: 1em auto; */
+  box-shadow: 1px 1px 5px grey;
+  background: #FCFCFD;
+  transition: 1s;
+  
+}
+.more-info-title {
+  text-align: center;
+}
+.more-info-section {
+
+margin-top: 17em;
+}
+/* styling of buttons and footer */
+
+#choose-pet {
+  
+    display: block;
+    justify-content: center;
+    width: 70%;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    line-height: 35px;
+    margin: 20% auto 40px;
+  }
+
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  transition: 400ms;
+  list-style-type: none;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    background-color: grey;
+    width: 100%;
+    padding: 0.5em;
+    font-size: 2em;
+    text-align: center;
+    background-color: #202124;
+    color: rgba(255, 255, 255, 0.921);
+  }
