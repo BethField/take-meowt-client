@@ -8,9 +8,13 @@
 .mySlides {display: none;}
 
 body {
-    background-color: #FEF9EF;
+    background-color: white;
     margin: 0 auto;
     height: 100vh;
+}
+
+.wrapper {
+  background-color: #fef9ef;
 }
 
 /* apply styles to header and nav */
@@ -20,7 +24,7 @@ body {
     z-index: 1;
     top: 0;
     width: 100%;
-    padding: 10px 15px;
+    padding: 0 15px;
     background-color: grey;
     font-size: 2em;
     text-align: center;
@@ -59,7 +63,8 @@ footer > ul {
     height: 39vh;
     flex-direction: column;
     width:100%;
-    margin-top: 25%;
+    margin-top: 30px;
+    
 }
 
 /* styling carousel images to ensure they are all same height/width */
@@ -241,7 +246,7 @@ footer {
     background-color: grey;
     width: 100%;
     margin-top: 30px;
-    padding: 0.5em;
+    padding: 0.25em;
     font-size: 2em;
     text-align: center;
     background-color: #202124;
@@ -282,8 +287,13 @@ li:hover {
     margin: 0 auto 80px;
   }
 
+  #img {
+    width: 5%;
+  }
+
   .carousel-img {
-    height: 400px;
+    min-height: 350px;
+    max-height: 400px;
   }
 
   #buttons {
