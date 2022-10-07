@@ -76,10 +76,10 @@ instagram.addEventListener("click", directToSocials);
 
 const homeButton = document.querySelector(".fa-arrow-left");
 homeButton.addEventListener("click", () => {
-  window.open("file:./landing.html");
+  window.open("file:./landing.html", "_self");
 });
 
 const backButton = document.querySelector(".fa-house");
 backButton.addEventListener("click", () => {
-  window.open("file:./landing.html");
+  window.open("file:./landing.html", "_self");
 });
