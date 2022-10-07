@@ -8,9 +8,13 @@
 .mySlides {display: none;}
 
 body {
-    background-color: #FEF9EF;
+    background-color: white;
     margin: 0 auto;
     height: 100vh;
+}
+
+.wrapper {
+  background-color: #fef9ef;
 }
 
 /* apply styles to header and nav */
@@ -59,7 +63,8 @@ footer > ul {
     height: 39vh;
     flex-direction: column;
     width:100%;
-    margin-top: 25%;
+    margin-top: 30px;
+    
 }
 
 /* styling carousel images to ensure they are all same height/width */
@@ -280,6 +285,10 @@ li:hover {
 
   #carousel {
     margin: 0 auto 80px;
+  }
+
+  #img {
+    width: 5%;
   }
 
   .carousel-img {

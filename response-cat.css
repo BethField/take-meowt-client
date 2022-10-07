@@ -33,7 +33,7 @@ li img {
 
 .response-wrapper {
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.12), 0 1px 10px rgba(0, 0, 0, 0.24);
-  padding-bottom: 0px;
+  padding-bottom: 20px;
   border-radius: 10px;
   background-color: #fef9ef;
 }
@@ -98,6 +98,12 @@ img {
   width: 100%;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+}
+
+.response-info p {
+  font-weight: 300;
+  text-align: justify;
+  padding: 0 10px 20px;
 }
 
 p {
@@ -172,6 +178,7 @@ h1 {
 
   h1.animal-name {
     text-align: left;
+    padding-top: 0;
   }
 
   .animal-name {
