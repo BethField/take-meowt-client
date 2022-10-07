@@ -170,6 +170,11 @@ footer {
     margin: 0 auto;
     padding-left: 100px;
   }
+
+  .questionBox {
+    width: 60%;
+  }
+
   .lifestyle-questions {
     width: 500px;
     margin: 0 auto;
