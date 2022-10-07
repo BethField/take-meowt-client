@@ -30,7 +30,7 @@ async function displayAnimal() {
   for (let i = 0; i < arr.length; i++) {
     console.log(arr[i]["id"]);
     data += `<div class="animal-card">
-                <a href= "profile.html?id=${arr[i]["id"]}">
+                <a href= "cat-profile.html?id=${arr[i]["id"]}">
               <div class="animal-img">
                 <img src="./images/cats.png" alt="image of displayed dog or cat." />
               </div>

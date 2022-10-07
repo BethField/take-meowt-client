@@ -13,7 +13,7 @@ const getAnimalId = async () => {
     try {
     const index = dogIndex
 
-    const response = await fetch(`http://localhost:3000/dogs/${index}`);
+    const response = await fetch(`http://localhost:3000/cats/${index}`);
     
     const id = await response.json();
     return(id)
@@ -51,7 +51,7 @@ const animalDescription = async () => {
     breed.className = "breed"
  
 
-    animalImg.src = "./images/beagle.png" 
+    animalImg.src = "./images/cats.png" 
     animalName.textContent = ` ${animalId.name}  ${checkGender(animalId.gender)}`;
     animalDescription.textContent = `${animalId.name} is an incredibly sweet ${animalId.gender}. While she hasn't had the best start in life and can be a little wary of people when she first meets them, this hasn't dented her enthusiasm or her ability to quickly make friends. ${animalId.name} is: 
     super intelligent and a keen explorer who wants to investigate every sniff, sound and sight she encounters.`
@@ -88,7 +88,6 @@ const displayMoreInfo = async () => {
     const animalId = await getAnimalId();
 
     let moreInformation = document.querySelector('#more-info-section');
-    console.log(moreInformation)
     const moreInfo = document.createElement("h3")
     const moreInfoTrait = document.createElement("p")
     const moreInfoTraitTwo = document.createElement("p")
@@ -190,7 +189,7 @@ function directToSocials(event) {
   }
 
 const homeButton = () => window.open("file:./landing.html" , "_self");
-const backButton = () => window.open("file:./response.html", "_self" );
+const backButton = () => window.open("file:./response-cat.html", "_self" );
 
 displayAnimalData()
 displayMoreInfo()
@@ -203,6 +202,4 @@ const twitter = document.querySelector('.fa-twitter');
 const instagram = document.querySelector('.fa-instagram');
 twitter.addEventListener('click', directToSocials);
 instagram.addEventListener('click', directToSocials);
-
-
 
