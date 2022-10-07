@@ -37,7 +37,7 @@ async function sendUserData(e) {
     sessionStorage.setItem("formData", JSON.stringify(data));
     window.location.href = `./response.html`;
   } else {
-    alert("Please");
+    alert("Please select between 1 to 2 breeds, sizes and temperaments");
   }
 }
 

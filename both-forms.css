@@ -21,19 +21,32 @@ header {
   position: fixed;
   top: 0px;
   width: 100%;
-  padding: 20px 15px;
+  padding: 0 15px;
   background-color: grey;
   font-size: 2em;
   text-align: center;
   background-color: #202124;
   color: rgba(255, 255, 255, 0.921);
   z-index: 1;
+  height: 70px;
 }
 
 li {
   transition: 400ms;
   list-style-type: none;
 }
+
+.fa-arrow-left,
+.fa-house {
+  position: relative;
+  top: 17px;
+}
+
+#logo {
+  max-width: 65px;
+  max-height: 65px;
+}
+
 li:hover {
   color: #0377b6;
   cursor: pointer;
@@ -53,14 +66,14 @@ ul {
   padding: 0;
 }
 
-form {
+/* form {
   width: 100%;
   height: 2500px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: space-between;
-}
+} */
 
 .questionBox {
   width: 90%;
@@ -104,7 +117,6 @@ form {
 .breed-options2,
 .temp-options1,
 .temp-options2 {
-  width: 50%;
   display: flex;
   flex-wrap: wrap;
 }
@@ -167,6 +179,7 @@ footer {
   text-align: center;
   background-color: #202124;
   color: rgba(255, 255, 255, 0.921);
+  height: 70px;
 }
 
 @media (min-width: 700px) {

@@ -32,7 +32,7 @@ async function sendUserData(e) {
     sessionStorage.setItem("formData", JSON.stringify(data));
     window.location.href = `./response-cat.html`;
   } else {
-    alert("Please tick the correct amount of checkboxes");
+    alert("Please select between 1 to 2 breeds and temperaments");
   }
 }
 
