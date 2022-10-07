@@ -58,7 +58,7 @@ const animalDescription = async () => {
     animalAge.textContent = `Age: ${animalId.age} years old`
     
     breed.textContent = ` Breed: ${animalId.breed} `
-    aboutMe.textContent = "About me "
+    aboutMe.textContent = `About ${animalId.name} `
     // const animalGender = await getAnimalGender()
 
     // const animalGender = await getAnimalGender()
