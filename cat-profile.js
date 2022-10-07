@@ -6,12 +6,12 @@ function getAnimalData () {
     return(idx) 
 }
 
-const dogIndex = getAnimalData()
+const catIndex = getAnimalData()
 
 //get data object from server and convert it to json 
 const getAnimalId = async () => {
     try {
-    const index = dogIndex
+    const index = catIndex
 
     const response = await fetch(`http://localhost:3000/cats/${index}`);
     
@@ -23,7 +23,7 @@ const getAnimalId = async () => {
   }
   
   
-  // display dog description by id 
+  // display cat description by id 
 
 const displayAnimalData = async () => {
     const animalId = await getAnimalId();

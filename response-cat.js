@@ -4,7 +4,7 @@ console.log("Hello from cat scripts!");
 // Doesn't display correctly when client is running on a live server
 //console.log(JSON.parse(sessionInfo));
 
-async function getDogs() {
+async function getCats() {
   //   const sessionInfo = sessionStorage.getItem("formData");
   //   const request = JSON.parse(sessionInfo);
 
@@ -24,7 +24,7 @@ async function getDogs() {
 }
 
 async function displayAnimal() {
-  const arr = await getDogs();
+  const arr = await getCats();
   let responseContainer = document.getElementById("response-container");
   let data = ``;
   for (let i = 0; i < arr.length; i++) {

@@ -1,6 +1,7 @@
 #about-you {
-  height: 500px;
+  height: 540px; 
 }
+/* increase height to fit longer questions */
 
 #lifestyle {
   height: 650px;
