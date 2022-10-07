@@ -32,7 +32,7 @@ async function sendUserData(e) {
     sessionStorage.setItem("formData", JSON.stringify(data));
     window.location.href = `./response-cat.html`;
   } else {
-    alert("Please");
+    alert("Please select between 1 to 2 breeds and temperaments");
   }
 }
 
@@ -76,10 +76,10 @@ instagram.addEventListener("click", directToSocials);
 
 const homeButton = document.querySelector(".fa-arrow-left");
 homeButton.addEventListener("click", () => {
-  window.open("file:./landing.html");
+  window.open("file:./landing.html", "_self");
 });
 
 const backButton = document.querySelector(".fa-house");
 backButton.addEventListener("click", () => {
-  window.open("file:./landing.html");
+  window.open("file:./landing.html", "_self");
 });

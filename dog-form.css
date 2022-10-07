@@ -1,15 +1,24 @@
 #about-you {
-  height: 500px;
+  height: 550px;
 }
 
 #lifestyle {
-  height: 650px;
+  height: 700px;
 }
 
 #pet-experience {
-  height: 450px;
+  height: 500px;
 }
 
 #preferences {
-  height: 500px;
+  height: 550px;
+}
+
+form {
+  width: 100%;
+  height: 2600px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: space-between;
 }
