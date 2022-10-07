@@ -55,7 +55,7 @@ ul {
 
 form {
   width: 100%;
-  height: 2450px;
+  height: 2500px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -74,6 +74,7 @@ form {
 
 .box-title {
   text-align: center;
+  margin: 40px 0;
 }
 
 .question-title {
@@ -123,11 +124,15 @@ form {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
   text-decoration: none;
   line-height: 35px;
+  background-color: #fef9ef;
+  font-family: "Lato", sans-serif;
+  color: #202124;
 }
 
 .next-button:hover {
   position: relative;
   top: 3px;
+  opacity: 0.5;
 }
 
 .submit {
@@ -164,7 +169,7 @@ footer {
   color: rgba(255, 255, 255, 0.921);
 }
 
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   .questions {
     width: 500px;
     margin: 0 auto;
@@ -174,5 +179,9 @@ footer {
     width: 500px;
     margin: 0 auto;
     padding-left: 150px;
+  }
+  form {
+    width: 80%;
+    margin: 0 auto;
   }
 }

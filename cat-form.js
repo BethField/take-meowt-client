@@ -32,7 +32,7 @@ async function sendUserData(e) {
     sessionStorage.setItem("formData", JSON.stringify(data));
     window.location.href = `./response-cat.html`;
   } else {
-    alert("Please");
+    alert("Please tick the correct amount of checkboxes");
   }
 }
 
