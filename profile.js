@@ -51,10 +51,9 @@ const animalDescription = async () => {
     breed.className = "breed"
  
 
-    animalImg.src = "./images/beagle.png" 
+    animalImg.src = "./images/spaniel.jpeg" 
     animalName.textContent = ` ${animalId.name}  ${checkGender(animalId.gender)}`;
-    animalDescription.textContent = `${animalId.name} is an incredibly sweet ${animalId.gender}. While she hasn't had the best start in life and can be a little wary of people when she first meets them, this hasn't dented her enthusiasm or her ability to quickly make friends. ${animalId.name} is: 
-    super intelligent and a keen explorer who wants to investigate every sniff, sound and sight she encounters.`
+    animalDescription.textContent = `${animalId.name} is an incredibly sweet ${animalId.gender}. While ${checkPronoun(animalId.gender)} hasn't had the best start in life and can be a little wary of people when ${checkPronoun(animalId.gender)} first meets them, this hasn't dented her enthusiasm or ${checkPronounTwo(animalId.gender)} ability to quickly make friends. ${animalId.name}'s main traits are ${animalId.temperament[0]}, ${animalId.temperament[1]}, ${animalId.temperament[2]} and ${animalId.temperament[3]}.`
 
     animalAge.textContent = `Age: ${animalId.age} years old`
     
@@ -127,6 +126,22 @@ const checkGender = (val) => {
         return '♀'
     } else {
         return '⚦'
+    }
+}
+
+const checkPronoun = (val) => {
+    if(val == "female") {
+        return 'she'
+    } else {
+        return "he"
+    }
+}
+
+const checkPronounTwo = (val) => {
+    if(val == "female") {
+        return 'her'
+    } else {
+        return "his"
     }
 }
 //displays temperaments of selected animal 
