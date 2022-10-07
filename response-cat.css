@@ -102,7 +102,7 @@ img {
 
 .response-info p {
   font-weight: 300;
-  text-align: justify;
+  text-align: center;
   padding: 0 10px 20px;
 }
 
@@ -126,7 +126,7 @@ a, a:visited {
 }
 
 .animal-name {
-  margin: 0.2em 0;
+  margin: 0;
   font-size: 2em;
 }
 
