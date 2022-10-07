@@ -72,8 +72,8 @@ function directToSocials(event) {
 displayAnimal();
 //getDogs();
 
-const homeButton = () => window.open("file:./landing.html");
-const backButton = () => window.open("file:./form.html");
+const homeButton = () => window.open("file:./landing.html", "_self");
+const backButton = () => window.open("file:./form.html", "_self");
 
 
 const backHome = document.querySelector('.fa-house');

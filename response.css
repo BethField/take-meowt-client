@@ -13,7 +13,7 @@ body {
   z-index: 1;
   top: 0;
   width: 100%;
-  padding: 20px 15px;
+  padding: 0 15px;
   background-color: grey;
   font-size: 2em;
   text-align: center;
@@ -21,10 +21,22 @@ body {
   color: rgba(255, 255, 255, 0.921);
 }
 
+li img {
+  max-width: 80%;
+  max-height: 80%;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  top: 10px;
+  
+}
+
+
 .response-wrapper {
   background-color: #fef9ef;
   border-radius: 10px;
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.12), 0 1px 10px rgba(0, 0, 0, 0.24);
+  padding-bottom: 20px;
 }
 
 li:hover {
@@ -57,9 +69,15 @@ ul {
   padding: 0;
 }
 
+.nav-items {
+  position: relative;
+  top: 15px;
+}
+
 li {
   transition: 400ms;
   list-style-type: none;
+  
 }
 
 .animal-card {
@@ -73,14 +91,21 @@ li {
 }
 
 h1 {
-    margin-top: 150px;
+    margin-top: 60px;
     text-align: center;
+    padding-top: 20px;
 }
 
 img {
   width: 100%;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+}
+
+.response-info p {
+  font-weight: 300;
+  text-align: center;
+  padding-bottom: 20px;
 }
 
 p {
@@ -121,7 +146,7 @@ footer {
   bottom: 0;
   background-color: grey;
   width: 100%;
-  padding: 0.5em;
+  padding: 0.25em 0.5em;
   font-size: 2em;
   text-align: center;
   background-color: #202124;
@@ -146,22 +171,26 @@ footer {
 }
 
   h1 {
-    margin-top: 30px;
+    margin-top: 0px;
   }
 
   h1.animal-name {
     text-align: left;
+    padding-top: 0;
   }
 
   .animal-name {
     font-size: 1.5em;
+    padding-left: 10px;
   }
 
   .animal-breakdown {
     font-size: 0.85em;
+    padding: 0 5px
   }
 
   .nav, footer > ul {
     justify-content: space-evenly;
   }
 }
+
